@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOGRegister", "HOGRegister.csproj", "{EAFC73D0-D6B0-42B1-86C8-650613C8686B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOGRegister.Tests", "..\HOGRegister.Tests\HOGRegister.Tests.csproj", "{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAFC73D0-D6B0-42B1-86C8-650613C8686B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFC73D0-D6B0-42B1-86C8-650613C8686B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFC73D0-D6B0-42B1-86C8-650613C8686B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFC73D0-D6B0-42B1-86C8-650613C8686B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA9CCB91-3FCE-4EAA-80C5-D1C7F774A03B}
+	EndGlobalSection
+EndGlobal
