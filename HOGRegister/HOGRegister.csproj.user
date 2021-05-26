@@ -8,8 +8,9 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
-    <ActiveDebugTarget>ContainerToolsProjectDebugExtension</ActiveDebugTarget>
+    <LastActiveSolutionConfig>Debug|x64</LastActiveSolutionConfig>
+    <ActiveDebugTarget>
+    </ActiveDebugTarget>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
