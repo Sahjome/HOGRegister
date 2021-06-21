@@ -17968,6 +17968,18 @@ span.featured {
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+.candidate-job-info {
+    border-top: 1px solid #e8eef1;
+    padding: 12px 5px;
+}
+.candidate-job-info, .action {
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+}
 .candidate-grid .candidate-logo {
   padding: 5px;
   margin: 0 auto 20px;
@@ -19189,6 +19201,9 @@ span.featured {
 }
 .detail-wrapper .detail-wrapper-header {
   padding: 14px 20px;
+  border-bottom: 1px solid #eaeff5;
+}
+.detail-wrapper .detail-wrapper-header-reform {
   border-bottom: 1px solid #eaeff5;
 }
 .detail-wrapper .detail-wrapper-header h1, .detail-wrapper .detail-wrapper-header h2, .detail-wrapper .detail-wrapper-header h3, .detail-wrapper .detail-wrapper-header h4 {

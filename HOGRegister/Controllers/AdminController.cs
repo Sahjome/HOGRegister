@@ -26,5 +26,25 @@ namespace HOGRegister.Controllers
         {
             return View("Units/AddUnit");
         }
+        public ActionResult Workers()
+        {
+            return View("Workers/Workers");
+        }
+        public ActionResult WorkerDetail()
+        {
+            return View("Workers/WorkerDetail");
+        }
+        public ActionResult AddWorker()
+        {
+            return View("Workers/AddWorker");
+        }
+        public ActionResult SuspendedWorkers()
+        {
+            return View("Workers/SuspendedWorkers");
+        }
+        public ActionResult DisabledWorkers()
+        {
+            return View("Workers/DisabledWorkers");
+        }
     }
 }
