@@ -72,9 +72,8 @@ C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\bin\System.Web.WebPag
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\bin\Newtonsoft.Json.xml
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\bin\Antlr3.Runtime.pdb
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\obj\x64\Debug\HOGRegister.csprojAssemblyReference.cache
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\obj\x64\Debug\HOGRegister.csproj.CoreCompileInputs.cache
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\obj\x64\Debug\HOGRegister.csproj.CopyComplete
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\obj\x64\Debug\HOGRegister.dll
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\obj\x64\Debug\HOGRegister.pdb
-C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\bin\SecuGen.FDxSDKPro.Windows.dll
+C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister\obj\x64\Debug\HOGRegister.csprojAssemblyReference.cache

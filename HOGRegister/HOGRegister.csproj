@@ -49,10 +49,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SecuGen.FDxSDKPro.Windows, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4c4e1bcde5201535, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\FDx SDK Pro for Windows v4.03_J1.12\FDx SDK Pro for Windows v4.03_J1.12\FDx SDK Pro for Windows 4.03\DotNET\Bin\x64\SecuGen.FDxSDKPro.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,6 +123,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,12 +135,210 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\elementor\assets\css\frontend.minab7d.css" />
+    <Content Include="Content\elementor\assets\js\frontend-modules.minab7d.js" />
+    <Content Include="Content\elementor\assets\js\frontend.minab7d.js" />
+    <Content Include="Content\elementor\assets\js\jquery.highlightb52e.js" />
+    <Content Include="Content\elementor\assets\js\jquery.ui.touch-punch.min8337.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\Control.Geocodercc1a.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\esri-leaflet-geocodercc1a.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\esri-leafletcc1a.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\images\layers-2x.html" />
+    <Content Include="Content\elementor\assets\js\leaflet\images\layers.html" />
+    <Content Include="Content\elementor\assets\js\leaflet\images\marker-icon.html" />
+    <Content Include="Content\elementor\assets\js\leaflet\Leaflet.GoogleMutantcc1a.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\leaflet.markerclustercc1a.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\leafletcc1a.css" />
+    <Content Include="Content\elementor\assets\js\leaflet\leafletcc1a.js" />
+    <Content Include="Content\elementor\assets\js\leaflet\LeafletHtmlIconcc1a.js" />
+    <Content Include="Content\elementor\assets\js\magnific\jquery.magnific-popup.minf488.js" />
+    <Content Include="Content\elementor\assets\js\magnific\magnific-popupf488.css" />
+    <Content Include="Content\elementor\assets\js\main6a41.js" />
+    <Content Include="Content\elementor\assets\lib\animations\animations.minab7d.css" />
+    <Content Include="Content\elementor\assets\lib\dialog\dialog.minae9e.js" />
+    <Content Include="Content\elementor\assets\lib\eicons\css\elementor-icons.min4c7e.css" />
+    <Content Include="Content\elementor\assets\lib\eicons\fonts\eicons2cbf.svg" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\css\font-awesome.min1849.css" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\elementor\assets\lib\share-link\share-link.minab7d.js" />
+    <Content Include="Content\elementor\assets\lib\swiper\swiper.min9a8d.js" />
+    <Content Include="Content\elementor\assets\lib\waypoints\waypoints.min05da.js" />
+    <Content Include="Content\elementor\css\global32fd.css" />
+    <Content Include="Content\elementor\css\post-11426d.css" />
+    <Content Include="Content\elementor\css\post-1315f9.css" />
+    <Content Include="Content\elementor\css\post-1321e88b.css" />
+    <Content Include="Content\elementor\css\post-1323bd8e.css" />
+    <Content Include="Content\elementor\css\post-1325ca0c.css" />
+    <Content Include="Content\elementor\css\post-134734a6.css" />
+    <Content Include="Content\elementor\css\post-1437f2d7.css" />
+    <Content Include="Content\elementor\css\post-1447a8c4.css" />
+    <Content Include="Content\elementor\css\post-14581cd4.css" />
+    <Content Include="Content\elementor\css\post-15b197.css" />
+    <Content Include="Content\elementor\css\post-1870c62.css" />
+    <Content Include="Content\elementor\css\post-198ce0.css" />
+    <Content Include="Content\elementor\css\post-24762b5.css" />
+    <Content Include="Content\elementor\css\post-2562b5.css" />
+    <Content Include="Content\elementor\css\post-33062b5.css" />
+    <Content Include="Content\elementor\css\post-33862b5.css" />
+    <Content Include="Content\elementor\css\post-34062b5.css" />
+    <Content Include="Content\elementor\css\post-3548ce0.css" />
+    <Content Include="Content\elementor\css\post-3588ce0.css" />
+    <Content Include="Content\elementor\css\post-3718ce0.css" />
+    <Content Include="Content\elementor\css\post-374ffae.css" />
+    <Content Include="Content\elementor\css\post-399ffae.css" />
+    <Content Include="Content\elementor\css\post-710c62.css" />
+    <Content Include="Content\elementor\css\post-7df16.css" />
+    <Content Include="Content\elementor\css\post-82b749.css" />
+    <Content Include="Content\elementor\css\post-992a2.css" />
+    <Content Include="Content\elementor\thumbs\blog-1-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-1-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-2-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-2-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-4-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-4-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-5-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-5-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-6-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-6-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-7-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-7-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-8-olq9w2buvgjn4btrmhsq8hrmwywc9sq3j6y6ztrcao.jpg" />
+    <Content Include="Content\elementor\thumbs\blog-8-olq9w2bzizi2gswkkbncnc1rkj17vbzs6g0t0h662s.jpg" />
+    <Content Include="Content\Images\06\banner-job.jpg" />
+    <Content Include="Content\Images\06\bg-ac-1.jpg" />
+    <Content Include="Content\Images\06\bg-ac-2.jpg" />
+    <Content Include="Content\Images\06\blog-5.jpg" />
+    <Content Include="Content\Images\06\blog-6.jpg" />
+    <Content Include="Content\Images\06\blog-7.jpg" />
+    <Content Include="Content\Images\06\c-4.png" />
+    <Content Include="Content\Images\06\c-5.png" />
+    <Content Include="Content\Images\06\c-6.png" />
+    <Content Include="Content\Images\06\c-8.png" />
+    <Content Include="Content\Images\06\client-1-150x150.jpg" />
+    <Content Include="Content\Images\06\client-1.jpg" />
+    <Content Include="Content\Images\06\client-2-150x150.jpg" />
+    <Content Include="Content\Images\06\client-2.jpg" />
+    <Content Include="Content\Images\06\client-3-150x150.jpg" />
+    <Content Include="Content\Images\06\client-3-55x55.jpg" />
+    <Content Include="Content\Images\06\client-3.jpg" />
+    <Content Include="Content\Images\06\client-4-150x150.jpg" />
+    <Content Include="Content\Images\06\client-4.jpg" />
+    <Content Include="Content\Images\06\logo-1.png" />
+    <Content Include="Content\Images\06\logo-light-1.png" />
+    <Content Include="Content\Images\06\slider1-1.jpg" />
+    <Content Include="Content\Images\07\banner-4.jpg" />
+    <Content Include="Content\Images\07\bg-category-4.jpg" />
+    <Content Include="Content\Images\07\bg-new.png" />
+    <Content Include="Content\Images\07\blog-1.jpg" />
+    <Content Include="Content\Images\07\blog-2.jpg" />
+    <Content Include="Content\Images\07\blog-4-150x150.jpg" />
+    <Content Include="Content\Images\07\blog-4.jpg" />
+    <Content Include="Content\Images\07\blog-5-150x150.jpg" />
+    <Content Include="Content\Images\07\blog-5.jpg" />
+    <Content Include="Content\Images\07\blog-6.jpg" />
+    <Content Include="Content\Images\07\blog-7-150x150.jpg" />
+    <Content Include="Content\Images\07\blog-7.jpg" />
+    <Content Include="Content\Images\07\blog-8.jpg" />
+    <Content Include="Content\Images\07\jb-4.png" />
+    <Content Include="Content\Images\07\sldier2.jpg" />
+    <Content Include="Content\Images\07\slider3.jpg" />
+    <Content Include="Content\Images\07\slider4.jpg" />
+    <Content Include="Content\Images\07\slider5.png" />
+    <Content Include="Content\Images\08\e1.jpg" />
+    <Content Include="Content\Images\08\e2.jpg" />
+    <Content Include="Content\Images\08\e3.jpg" />
+    <Content Include="Content\Images\08\e4.jpg" />
+    <Content Include="Content\Images\img\bg-vendor.jpg" />
+    <Content Include="Content\Images\img\error.jpg" />
+    <Content Include="Content\Images\img\loading-quick.gif" />
+    <Content Include="Content\Images\img\loading.gif" />
+    <Content Include="Content\Images\img\logo.png" />
+    <Content Include="Content\Images\img\plus.png" />
+    <Content Include="Content\Images\img\select.png" />
+    <Content Include="Content\js\comment-reply.minb1bb.js" />
+    <Content Include="Content\js\jquery\jquery-migrate.min330a.js" />
+    <Content Include="Content\js\jquery\jquery4a5f.js" />
+    <Content Include="Content\js\jquery\ui\core.mine899.js" />
+    <Content Include="Content\js\jquery\ui\mouse.mine899.js" />
+    <Content Include="Content\js\jquery\ui\position.mine899.js" />
+    <Content Include="Content\js\jquery\ui\slider.mine899.js" />
+    <Content Include="Content\js\jquery\ui\widget.mine899.js" />
+    <Content Include="Content\js\underscore.min4511.js" />
+    <Content Include="Content\js\wp-embed.minb1bb.js" />
+    <Content Include="Content\js\wp-util.minb1bb.js" />
+    <Content Include="Content\style.minb1bb.css" />
+    <Content Include="Content\theme.minb1bb.css" />
+    <Content Include="Content\workup\css\animateaf6c.css" />
+    <Content Include="Content\workup\css\bootstrap55a0.css" />
+    <Content Include="Content\workup\css\flaticon8a54.css" />
+    <Content Include="Content\workup\css\line-font8a54.css" />
+    <Content Include="Content\workup\css\magnific-popupf488.css" />
+    <Content Include="Content\workup\css\owl.video.play.html" />
+    <Content Include="Content\workup\css\perfect-scrollbard0c7.css" />
+    <Content Include="Content\workup\css\slickee8b.css" />
+    <Content Include="Content\workup\css\template5152.css" />
+    <Content Include="Content\workup\css\themify-icons8a54.css" />
+    <Content Include="Content\workup\css\woocommerce8a54.css" />
+    <Content Include="Content\workup\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\workup\fonts\et-line.svg" />
+    <Content Include="Content\workup\fonts\Flaticon.svg" />
+    <Content Include="Content\workup\fonts\themify.svg" />
+    <Content Include="Content\workup\fonts\themify9f24.svg" />
+    <Content Include="Content\workup\images\bg-vendor.jpg" />
+    <Content Include="Content\workup\images\error.jpg" />
+    <Content Include="Content\workup\images\loading-quick.gif" />
+    <Content Include="Content\workup\images\loading.gif" />
+    <Content Include="Content\workup\images\logo.png" />
+    <Content Include="Content\workup\images\plus.png" />
+    <Content Include="Content\workup\images\select.png" />
+    <Content Include="Content\workup\js\bootstrap.min8337.js" />
+    <Content Include="Content\workup\js\countdownf945.js" />
+    <Content Include="Content\workup\js\functions8337.js" />
+    <Content Include="Content\workup\js\job-map8337.js" />
+    <Content Include="Content\workup\js\job8337.js" />
+    <Content Include="Content\workup\js\jquery.magnific-popup.minf488.js" />
+    <Content Include="Content\workup\js\jquery.unveilf488.js" />
+    <Content Include="Content\workup\js\mmenu\jquery.mmenud0c7.css" />
+    <Content Include="Content\workup\js\mmenu\jquery.mmenud0c7.js" />
+    <Content Include="Content\workup\js\perfect-scrollbar.jquery.mind0c7.js" />
+    <Content Include="Content\workup\js\slick.minee8b.js" />
+    <Content Include="Content\workup\js\woocommerce8337.js" />
+    <Content Include="Content\workup\style5152.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\elementor\assets\lib\eicons\fonts\eicons2cbf.eot" />
+    <Content Include="Content\elementor\assets\lib\eicons\fonts\eicons2cbf.ttf" />
+    <Content Include="Content\elementor\assets\lib\eicons\fonts\eicons2cbf.woff" />
+    <Content Include="Content\elementor\assets\lib\eicons\fonts\eicons2cbf.woff2" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Content\elementor\assets\lib\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\workup\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\workup\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\workup\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\workup\fonts\bootstrap\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\workup\fonts\et-line.eot" />
+    <Content Include="Content\workup\fonts\et-line.ttf" />
+    <Content Include="Content\workup\fonts\et-line.woff" />
+    <Content Include="Content\workup\fonts\et-lined41d.eot" />
+    <Content Include="Content\workup\fonts\Flaticon.eot" />
+    <Content Include="Content\workup\fonts\Flaticon.ttf" />
+    <Content Include="Content\workup\fonts\Flaticon.woff" />
+    <Content Include="Content\workup\fonts\Flaticon.woff2" />
+    <Content Include="Content\workup\fonts\Flaticond41d.eot" />
+    <Content Include="Content\workup\fonts\themify.eot" />
+    <Content Include="Content\workup\fonts\themify.ttf" />
+    <Content Include="Content\workup\fonts\themify.woff" />
+    <Content Include="Content\workup\fonts\themify9f24.eot" />
+    <Content Include="Content\workup\fonts\themify9f24.ttf" />
+    <Content Include="Content\workup\fonts\themify9f24.woff" />
+    <Content Include="Content\workup\fonts\themifyd41d.eot" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -173,6 +368,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Units\Units.cshtml" />
+    <Content Include="Views\Admin\Units\AddUnit.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Units\UnitDetail.cshtml" />
+    <Content Include="Views\Shared\DetailsLayout.cshtml" />
+    <Content Include="Views\Admin\Workers\Workers.cshtml" />
+    <Content Include="Views\Admin\Workers\SuspendedWorkers.cshtml" />
+    <Content Include="Views\Admin\Workers\AddWorker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -219,9 +422,10 @@
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -232,6 +436,9 @@
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -253,6 +460,9 @@
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:55722/" workingDir="" />
+          </servers>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

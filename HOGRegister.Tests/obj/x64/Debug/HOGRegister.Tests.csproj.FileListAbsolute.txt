@@ -36,4 +36,3 @@ C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister.Tests\obj\x64\Debug\H
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister.Tests\obj\x64\Debug\HOGRegister.Tests.csproj.CopyComplete
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister.Tests\obj\x64\Debug\HOGRegister.Tests.dll
 C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister.Tests\obj\x64\Debug\HOGRegister.Tests.pdb
-C:\Users\SAHJOME\Documents\Sources\HOGRegister\HOGRegister.Tests\bin\x64\Debug\SecuGen.FDxSDKPro.Windows.dll

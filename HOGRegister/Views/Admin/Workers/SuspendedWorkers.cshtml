@@ -1,0 +1,181 @@
+﻿@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<!-- InnerPage menu header begin -->
+<div class="jobs-filter-top-sidebar-wrapper filter-top-sidebar-wrapper">
+    <aside class="widget widget_job_filter_horizontal_widget">
+        <div class="widget-filter-job-top">
+            <div class="container">
+                <h2 class="widget-title"><span>All workers </span></h2>
+                <!-- Search top form begin -->
+                <form method="get" action="#"
+                      class="filter-job-form filter-listing-form filter-job-top">
+                    <div class="top-search">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="row-first-wrapper row">
+                                    <div class="col-xs-12 col-sm-4 md-clearfix sm-clearfix">
+                                        <div class="form-group form-group-title  ">
+                                            <div class="form-group-inner inner">
+                                                <input type="text" name="filter-title" class="form-control "
+                                                       value="" id="job_filter_horizontal_widget-4_title"
+                                                       placeholder="Member Surname">
+                                            </div>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 ">
+                                        <div class="form-group form-group-category  ">
+                                            <div class="form-group-inner inner">
+                                                <input type="text" name="filter-title" class="form-control "
+                                                       value="" id="job_filter_horizontal_widget-4_title"
+                                                       placeholder="Member Unit">
+                                            </div>
+                                        </div><!-- /.form-group -->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="flex-middle justify-content-between">
+                                    <div class="visiable-line">
+                                        <button class="button btn btn-theme-second">Search</button>
+                                    </div><!-- /.form-group -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- Search top form end -->
+            </div>
+        </div>
+    </aside>
+</div>
+<!-- InnerPage menu header end -->
+<!-- InnerPage content lists begin -->
+<section id="main-container" class=" main-content container inner">
+    <div class="row">
+        <div id="main-content" class="col-sm-12 col-md-12 col-sm-12 col-xs-12">
+            <main id="main" class="site-main layout-type-main" role="main">
+                <div data-elementor-type="wp-post" data-elementor-id="338" class="elementor elementor-338"
+                     data-elementor-settings="[]">
+                    <div class="elementor-inner">
+                        <div class="elementor-section-wrap">
+                            <section class="elementor-element elementor-element-5149c850 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                                     data-id="5149c850" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-row">
+                                        <div class="elementor-element elementor-element-445944aa elementor-column elementor-col-100 elementor-top-column" data-id="445944aa" data-element_type="column">
+                                            <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-18436198 elementor-widget elementor-widget-text-editor" data-id="18436198" data-element_type="widget" data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                <div class="jobs-listing-wrapper main-items-wrapper" data-display_mode="grid">
+                                                                    <div class="jobs-alert-ordering-wrapper">
+                                                                        <div class="results-count"> Showing <span class="first">1</span> &ndash; <span class="last">2</span> of 2 results</div>
+                                                                        <div class="jobs-ordering-wrapper">
+                                                                            <form class="jobs-ordering" method="get" action="#">
+                                                                                <div class="label">Sort by: </div>
+                                                                                <select name="filter-orderby" class="orderby" data-placeholder="Sort by">
+                                                                                    <option value="menu_order" selected='selected'> Default</option>
+                                                                                    <option value="newest"> Newest</option>
+                                                                                    <option value="oldest"> Oldest</option>
+                                                                                    <option value="random"> Random</option>
+                                                                                </select>
+                                                                                <input type="hidden" name="paged" value="1" />
+                                                                            </form>
+                                                                        </div>
+                                                                        <!-- count/page form begin -->
+                                                                        <form method="POST" action="#" class="form-workup-ppp">
+                                                                            <select name="jobs_ppp" onchange="this.form.submit()">
+                                                                                <option value="10" selected='selected'> 10 Per Page </option>
+                                                                                <option value="20"> 20 </option>
+                                                                                <option value="50"> 50 </option>
+                                                                                <option value="100"> 100 </option>
+                                                                            </select>
+                                                                            <input type="hidden" name="paged" value="1" />
+                                                                        </form>
+                                                                        <!-- count/page form end -->
+                                                                    </div>
+
+
+                                                                    <div class="jobs-wrapper items-wrapper">
+                                                                        <!-- grid row for workers begin -->
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6 col-md-3 col-xs-12">
+                                                                                <article class="job-grid post-859 job_listing type-job_listing status-publish hentry job_listing_type-internship job_listing_category-telecommunications job_listing_location-new-york job_listing_tag-design job_listing_tag-php job_listing_tag-web"
+                                                                                         data-latitude="40.64341405" data-longitude="-74.0009237496013">
+                                                                                    <div class="candiate-logo-reform text-center">
+                                                                                        <span class="suspended">Suspended</span>
+                                                                                        <a href="#">
+                                                                                            <img width="120" height="120" src="~/Content/Images/08/e2.jpg" class="attachment-thumbnail size-thumbnail wp-post-image"
+                                                                                                 alt="" srcset="~/Content/Images/08/e2.jpg 120w, ~/Content/Images/08/e2.jpg-55x55.jpg 55w"
+                                                                                                 sizes="(max-width: 120px) 100vw, 120px" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="job-information">
+                                                                                        <h2 class="job-title">
+                                                                                            <a href="#" rel="bookmark">Priscilla Ogwu</a>
+                                                                                        </h2>
+                                                                                        <div class="job-location"> FAD (Data)</div>
+                                                                                        <a class="btn btn-browse" href="#">View Profile</a>
+
+                                                                                    </div>
+                                                                                </article><!-- #post-## -->
+
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-3 col-xs-12">
+                                                                                <article class="job-grid post-858 job_listing type-job_listing status-publish hentry job_listing_type-contract-base job_listing_category-accounting-finance job_listing_location-new-york job_listing_tag-design job_listing_tag-mockup job_listing_tag-product"
+                                                                                         data-latitude="40.6826153" data-longitude="-73.9579800537488">
+                                                                                    <div class="candidate-logo-reform text-center">
+                                                                                        <span class="suspended">Suspended</span>
+                                                                                        <a href="#">
+                                                                                            <img width="120" height="120" src="~/Content/Images/06/c-5.png" class="attachment-thumbnail size-thumbnail wp-post-image"
+                                                                                                 alt="" srcset="~/Content/Images/06/c-5.png 120w, ~/Content/Images/06/c-5-55x55.png 55w"
+                                                                                                 sizes="(max-width: 120px) 100vw, 120px" />
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="job-information">
+                                                                                        <h2 class="job-title">
+                                                                                            <a href="#"
+                                                                                               rel="bookmark">Mr. Ibezim Onaji</a>
+                                                                                        </h2>
+                                                                                        <div class="job-location">Media</div>
+
+                                                                                        <a class="btn btn-browse" href="#">View Profile</a>
+                                                                                    </div>
+                                                                                </article><!-- #post-## -->
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- grid row for workers end -->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="jobs-pagination-wrapper main-pagination-wrapper">
+                                                                    <ul class="pagination ">
+                                                                        <li><span class="page-numbers current">1</span> </li>
+                                                                        @*<li><a class="page-numbers" href="page/2/index.html">2</a> </li> <li><a class="next page-numbers" href="page/2/index.html"><i class="flaticon-right-arrow"></i></a> </li>*@
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </main><!-- .site-main -->
+        </div><!-- .content-area -->
+
+    </div>
+</section>
+<!-- InnerPage content lists begin -->

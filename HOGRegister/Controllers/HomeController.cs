@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SecuGen.FDxSDKPro.Windows;
+//using SecuGen.FDxSDKPro.Windows;
 
 
 namespace HOGRegister.Controllers
 {
     public class HomeController : Controller
     {
+        #region fingerprint init
+        /*
         private SGFingerPrintManager m_FPM; //member variable
         SGFPMDeviceName device_name = SGFPMDeviceName.DEV_FDU03;
         static int m_ImageWidth, m_ImageHeight;
@@ -52,26 +54,24 @@ namespace HOGRegister.Controllers
             else
                 ViewBag.Message = "GetImage() Error : " + iError;
         }
-
-        //void OpenFingerPrint
+        */
+        #endregion fingerprint init
 
         public ActionResult Index()
         {
-            InitializeSGFingerPrintManager();
+            //InitializeSGFingerPrintManager();
             return View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

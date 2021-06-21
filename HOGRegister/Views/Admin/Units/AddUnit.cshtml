@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/DetailsLayout.cshtml";
+    ViewBag.Title = "Add Unit";
+}
+<!-- InnerPage breadcrumb begin -->
+<section id="apus-breadscrumb" class="breadcrumb-page apus-breadscrumb ">
+    <div class="container">
+        <div class="wrapper-breads">
+            <div class="wrapper-breads-inner">
+                <div class="breadscrumb-inner flex-middle-sm clearfix">
+                    <div class="ali-right">
+                        <h2 class="bread-title">ADD UNIT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- InnerPage breadcrumb end -->
+
+<!-- InnerPage content lists begin -->
+<section id="main-contianer" class="main-content container inner">
+    <div class="form-cover">
+        <form method="get" action="#" class="job-alert-form-reform">
+            <div class="form-group">
+                <label for="job_alert_form_widget-4_title">Unit Name</label>
+                <input type="text" name="name" class="form-control" id="job_alert_form_widget-4_title">
+            </div><!-- /.form-group -->
+            <div class="form-group">
+                <label for="job_alert_form_widget-4_title">Unit Leader</label>
+                <input type="text" name="leader" class="form-control" id="job_alert_form_widget-4_title">
+            </div>
+            <div class="form-group">
+                <label for="job_alert_form_widget-4_title">Overview</label>
+                <textarea name="overview" maxlength="200" placeholder="max of 200 words..." class="form-control" id="job_alert_form_widget-4_title"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="job_alert_form_widget-4_email_frequency">Responsibilities</label>
+                <textarea name="resp" maxlength="200" placeholder="separate responsibilities with a new line" class="form-control" id="job_alert_form_widget-4_title"></textarea>
+
+            </div><!-- /.form-group -->
+            <div class="form-group">
+                <button class="button">Save Job Alert</button>
+            </div><!-- /.form-group -->
+        </form>
+    </div>
+</section>
+<!-- InnerPage content lists end -->

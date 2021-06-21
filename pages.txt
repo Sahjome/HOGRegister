@@ -1,0 +1,45 @@
+Pages:
+General:
+ - Login
+ - forgot password
+ - sign-in register screen
+ - sign out register screen
+ - profile view/edit
+Leader:
+ - create/update new worker with fp
+ - list all members table
+ - member detail page (candidate details layout)
+ - settings page for penalties, erring timespan, when to calculate penalties time of the day.
+Admin:
+ - dashboard with all units
+ - report/logs table page with search & filter (candidates layout)
+ - 4 columns grid with all sundays logs (jobs layout)
+
+Menus:
+ - Workers (candidates) jobs Layout
+  - All workers
+  - Add worker
+  - Suspended workers
+  - Disabled workers
+ - Register 
+  - sign-in
+  - sign-out
+ - Rules/Settings
+ - Units (Jobs) jobs Layout
+  - All units
+  - Add unit
+ - Logs(Admin)
+
+========================================
+	SIZACH
+
+2. work on message queue image
+3. create user profiles service for sizach
+4. make calls from the gateway through to the register and login endpoints
+5. follow-up on notification service
+6. follow up with Niyi on sizach website design by 6pm
+
+	CLOHEA	
+1. complete customer high-level
+2. make sure to complete high-level workspace
+3. translate workspace high-level to cloud
