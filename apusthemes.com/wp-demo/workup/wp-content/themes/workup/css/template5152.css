@@ -17954,6 +17954,10 @@ span.featured {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.candidate-instruction{
+  text-align: center;
+}
+
 .candiate-logo-reform, .suspended{
   position: absolute;
     top: 13px;
@@ -18011,6 +18015,16 @@ span.featured {
 @media (min-width: 1200px) {
   .candidate-grid .candidate-information {
     padding: 12px 50px;
+  }
+}
+
+@media (min-width: 920px) {
+  .flex-space-between{
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+    display: -webkit-flex;
+    display: flex;  
   }
 }
 .candidate-grid .wrapper-shortlist {

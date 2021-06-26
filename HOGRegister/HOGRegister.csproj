@@ -378,6 +378,9 @@
     <Content Include="Views\Admin\Workers\AddWorker.cshtml" />
     <Content Include="Views\Admin\Workers\DisabledWorkers.cshtml" />
     <Content Include="Views\Admin\Workers\WorkerDetail.cshtml" />
+    <Content Include="Views\Admin\Workers\FingerPrint.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Admin\Workers\EditWorker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

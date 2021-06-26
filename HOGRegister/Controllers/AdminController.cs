@@ -38,6 +38,10 @@ namespace HOGRegister.Controllers
         {
             return View("Workers/AddWorker");
         }
+        public ActionResult EditWorker()
+        {
+            return View("Workers/EditWorker");
+        }
         public ActionResult SuspendedWorkers()
         {
             return View("Workers/SuspendedWorkers");
@@ -45,6 +49,10 @@ namespace HOGRegister.Controllers
         public ActionResult DisabledWorkers()
         {
             return View("Workers/DisabledWorkers");
+        }
+        public ActionResult FingerPrint()
+        {
+            return View("Workers/FingerPrint");
         }
     }
 }

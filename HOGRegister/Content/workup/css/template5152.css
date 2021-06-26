@@ -19004,10 +19004,14 @@ span.featured {
 }
 .employer-detail-detail .social-title,
 .job-detail-detail .social-title {
-  font-size: 14px;
+  font-size: 34px;
   margin: 20px 0 10px;
   font-weight: 500;
   color: #334e6f;
+}
+.employer-detail-detail .social-title,
+.job-detail-detail .social-title > span {
+    font-size: larger;
 }
 .employer-detail-detail .apus-social-share a,
 .job-detail-detail .apus-social-share a {
@@ -19482,7 +19486,9 @@ span.featured {
 .candidate-detail-buttons .btn-block + .btn-block {
   margin-top: 18px;
 }
-
+.candidate-instruction {
+    text-align: center;
+}
 .candidate-detail-header {
   padding: 25px 20px 20px;
 }
@@ -19560,6 +19566,16 @@ span.featured {
 }
 .rtl .list-detail-candidate li {
   float: right;
+}
+
+@media (min-width: 920px) {
+    .flex-space-between {
+        -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+        justify-content: space-between !important;
+        display: -webkit-flex;
+        display: flex;
+    }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .list-detail-candidate li {
