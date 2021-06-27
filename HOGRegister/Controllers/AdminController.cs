@@ -62,5 +62,9 @@ namespace HOGRegister.Controllers
         {
             return View("Logs/LogDetails");
         }
+        public ActionResult Settings()
+        {
+            return View("Settings/Settings");
+        }
     }
 }

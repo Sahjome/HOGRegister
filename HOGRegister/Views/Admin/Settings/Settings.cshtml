@@ -1,0 +1,216 @@
+﻿@{
+    Layout = "~/Views/Shared/DetailsLayout.cshtml";
+    ViewBag.Title = "Settings";
+}
+
+
+<!--
+    settings should help with the following:
+    1. Services: i.e. days of the week to be considered as a service e.g. 1x a week, 2x a week....
+    1a. Service Day(s): Monday, Tuesday, Wednesday...
+    2. Calculation period: i.e. time that determines when the missed services be calculated consecutively. e.g. 2 weeks
+    3. Action: this is what should happen after calculation e.g. suspend/disable/nothing(default)
+    3a. Action runtime: time of the day
+    4. Report template: none/story
+    5. Report day(s): datetime
+-->
+<!-- InnerPage breadcrumb begin -->
+<section id="apus-breadscrumb" class="breadcrumb-page apus-breadscrumb default">
+    <div class="container">
+        <div class="wrapper-breads">
+            <div class="wrapper-breads-inner">
+                <div class="breadscrumb-inner flex-middle-sm clearfix">
+                    <div class="ali-right">
+                        <h2 class="bread-title">Settings</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- InnerPage breadcrumb end -->
+<!-- InnerPage content begin -->
+<section id="main-container" class="container inner">
+    <div class="row">
+        <div id="main-content" class="main-page col-xs-12 clearfix">
+            <div id="main" class="site-main clearfix" role="main">
+
+                <div data-elementor-type="wp-post" data-elementor-id="19" class="elementor elementor-19" data-elementor-settings="[]">
+                    <div class="elementor-inner">
+                        <div class="elementor-section-wrap">
+                            <section class="elementor-element elementor-element-2eb1630 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2eb1630" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-row">
+                                        <div class="elementor-element elementor-element-8ed1021 elementor-column elementor-col-100 elementor-top-column" data-id="8ed1021" data-element_type="column">
+                                            <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-68d49a3 elementor-widget elementor-widget-spacer" data-id="68d49a3" data-element_type="widget" data-widget_type="spacer.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-spacer">
+                                                                <div class="elementor-spacer-inner"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-element elementor-element-e0dc248 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e0dc248" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1263px; left: -26.6667px;">
+                                <div class="elementor-container elementor-column-gap-extended">
+                                    <div class="elementor-row">
+                                        <div class="elementor-element elementor-element-8d8b9d7 elementor-column elementor-col-50 elementor-top-column" data-id="8d8b9d7" data-element_type="column">
+                                            <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-cfe8c2a elementor-widget elementor-widget-text-editor" data-id="cfe8c2a" data-element_type="widget" data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                <div class="wrapper-contact">
+                                                                    <div class="contact-icon text-theme"><i class="fa fa-gears"></i></div>
+                                                                    <h3 class="title">Services</h3><br>
+                                                                    <div role="form" class="wpcf7" id="wpcf7-f151-p19-o1" lang="en-US" dir="ltr">
+                                                                        <div class="screen-reader-response"></div>
+                                                                        <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+
+                                                                            <div class="contact-us">
+                                                                                <div class="form-group">
+                                                                                    <label>Service Count:</label><br>
+                                                                                    <span class="wpcf7-form-control-wrap your-name"><input type="number" name="service_count" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Services per week"></span>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="job_alert_form_widget-4_email_frequency">Service Day:</label>
+                                                                                    <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
+                                                                                        <option value="">Select Service Day</option>
+                                                                                        <option value="sunday">SUNDAY</option>
+                                                                                        <option value="monday">MONDAY</option>
+                                                                                        <option value="tuesday">TUESDAY</option>
+                                                                                        <option value="wednesday">WEDNESDAY</option>
+                                                                                        <option value="thursday">THURSDAY</option>
+                                                                                        <option value="friday">FRIDAY</option>
+                                                                                        <option value="saturday">SATURDAY</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Erring Period:</label> <small>(number of absential before action)</small><br>
+
+                                                                                    <span class="wpcf7-form-control-wrap your-name"><input type="number" name="service_count" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="absential count in a row"></span>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="job_alert_form_widget-4_email_frequency">Action Type:</label>
+                                                                                    <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
+                                                                                        <option value="">Select action type</option>
+                                                                                        <option value="suspend">SUSPEND</option>
+                                                                                        <option value="disable">DISABLE</option>
+                                                                                        <option value="nothing">NOTHING</option>
+
+                                                                                    </select>
+                                                                                </div><div class="form-group">
+                                                                                    <label for="job_alert_form_widget-4_email_frequency">Action Time:</label>
+                                                                                    <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
+                                                                                        <option value="">Select action time</option>
+                                                                                        <option value="03">03:00 AM</option>
+                                                                                        <option value="08">08:00 AM</option>
+                                                                                        <option value="13">01:00 PM</option>
+
+                                                                                        <option value="18">06:00 PM</option>
+                                                                                        <option value="23">11:00 PM</option>
+                                                                                    </select>
+                                                                                </div><div class="form-group">
+                                                                                    <input type="submit" value="UPDATE SERVICES" class="wpcf7-form-control wpcf7-submit btn btn-theme btn-sm"><span class="ajax-loader"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="elementor-element elementor-element-8dadcd5 elementor-column elementor-col-50 elementor-top-column" data-id="8dadcd5" data-element_type="column">
+                                            <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-203ebe1 elementor-widget elementor-widget-text-editor" data-id="203ebe1" data-element_type="widget" data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                <div class="wrapper-contact">
+                                                                    <div class="contact-icon text-theme"><i class="fa fa-tasks"></i></div>
+                                                                    <h3 class="title">Reports</h3><br>
+                                                                    <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+
+                                                                        <div class="contact-us">
+
+                                                                            <div class="form-group">
+                                                                                <label for="job_alert_form_widget-4_email_frequency">Report Day:</label>
+                                                                                <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
+                                                                                    <option value="">Select report day</option>
+                                                                                    <option value="sunday">SUNDAY</option>
+                                                                                    <option value="monday">MONDAY</option>
+                                                                                    <option value="tuesday">TUESDAY</option>
+                                                                                    <option value="wednesday">WEDNESDAY</option>
+                                                                                    <option value="thursday">THURSDAY</option>
+                                                                                    <option value="friday">FRIDAY</option>
+                                                                                    <option value="saturday">SATURDAY</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="job_alert_form_widget-4_email_frequency">Reporting Time:</label>
+                                                                                <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
+                                                                                    <option value="">Select reporting time</option>
+                                                                                    <option value="03">03:00 AM</option>
+                                                                                    <option value="08">08:00 AM</option>
+                                                                                    <option value="13">01:00 PM</option>
+
+                                                                                    <option value="18">06:00 PM</option>
+                                                                                    <option value="23">11:00 PM</option>
+                                                                                </select>
+                                                                            </div><div class="form-group">
+                                                                                <input type="submit" value="UPDATE REPORTS" class="wpcf7-form-control wpcf7-submit btn btn-theme btn-sm"><span class="ajax-loader"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="elementor-element elementor-element-119ae40 elementor-section-stretched elementor-section-full_width elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="119ae40" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1263px; left: -26.6667px;">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-row">
+                                        <div class="elementor-element elementor-element-6b83a55 elementor-column elementor-col-100 elementor-top-column" data-id="6b83a55" data-element_type="column">
+                                            <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-d748f18 elementor-widget elementor-widget-spacer" data-id="d748f18" data-element_type="widget" data-widget_type="spacer.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-spacer">
+                                                                <div class="elementor-spacer-inner"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .site-main -->
+        </div><!-- .content-area -->
+    </div>
+</section>
+<!-- InnerPage content end -->
