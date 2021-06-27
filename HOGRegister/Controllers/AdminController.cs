@@ -54,5 +54,13 @@ namespace HOGRegister.Controllers
         {
             return View("Workers/FingerPrint");
         }
+        public ActionResult Logs()
+        {
+            return View("Logs/Logs");
+        }
+        public ActionResult LogDetails()
+        {
+            return View("Logs/LogDetails");
+        }
     }
 }
