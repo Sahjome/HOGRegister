@@ -73,26 +73,26 @@
         <!-- navbar begin -->
         <nav id="navbar-offcanvas" class="navbar" role="navigation">
             <ul>
-                <li id="menu-item" class="active menu-item"><a href="index.html">Home</a></li>
+                <li id="menu-item" class="active menu-item">@Html.ActionLink("Home", "Index", "Home")</li>
                 <li id="menu-item-365" class="has-submenu menu-item-365">
                     <a href="#">Workers</a>
                     <ul class="sub-menu">
-                        <li id="menu-item-366" class="menu-item-366"><a href="#">All Workers</a></li>
-                        <li id="menu-item-363" class="menu-item-363"><a href="#">Add Worker</a></li>
-                        <li id="menu-item-362" class="menu-item-362"><a href="#">Suspended Workers</a></li>
-                        <li id="menu-item-385" class="menu-item-385"><a href="#">Disabled Workers</a></li>
+                        <li id="menu-item-366" class="menu-item-366">@Html.ActionLink("All Workers", "Workers", "Admin")</li>
+                        <li id="menu-item-363" class="menu-item-363">@Html.ActionLink("Add Worker", "AddWorker", "Admin")</li>
+                        <li id="menu-item-362" class="menu-item-362">@Html.ActionLink("Suspended Workers", "SuspendedWorkers", "Admin")</li>
+                        <li id="menu-item-385" class="menu-item-385">@Html.ActionLink("Disabled Workers", "DisabledWorkers", "Admin")</li>
                     </ul>
                 </li>
                 <li id="menu-item-365" class="has-submenu menu-item-365">
                     <a href="#">Units</a>
                     <ul class="sub-menu">
-                        <li id="menu-item-366" class="menu-item-366"><a href="#">All Units</a></li>
-                        <li id="menu-item-363" class="menu-item-363"><a href="#">Add Unit</a></li>
+                        <li id="menu-item-366" class="menu-item-366">@Html.ActionLink("All Units", "Units", "Admin")</li>
+                        <li id="menu-item-363" class="menu-item-363">@Html.ActionLink("Add Unit", "AddUnit", "Admin")</li>
                     </ul>
                 </li>
-                <li id="menu-item" class="menu-item"><a href="#">Register</a></li>
-                <li id="menu-item" class="menu-item"><a href="#">Settings</a></li>
-                <li id="menu-item" class="menu-item"><a href="#">Logs</a></li>
+                <li id="menu-item" class="menu-item">@Html.ActionLink("Register", "Register", "Home")</li>
+                <li id="menu-item" class="menu-item">@Html.ActionLink("Settings", "Settings", "Admin")</li>
+                <li id="menu-item" class="menu-item">@Html.ActionLink("Logs", "Logs", "Admin")</li>
             </ul>
         </nav>
         <div id="apus-header-mobile" class="header-mobile hidden-lg clearfix">
@@ -143,8 +143,8 @@
                                                              data-widget_type="workup_logo.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="logo ">
-                                                                    <a href="index.html">
-                                                                        <span class="logo-main ">
+                                                                    <a href="@Url.Action("Index", "Home")">
+                                                                        <span class="logo-main">
                                                                             <img width="211" height="48" src="~/Content/Images/06/logo-1.png" class="attachment-full size-full" alt="">
                                                                         </span>
                                                                     </a>
@@ -168,28 +168,29 @@
                                                                          role="navigation">
                                                                         <div class="collapse navbar-collapse no-padding">
                                                                             <ul id="primary-menu" class="nav navbar-nav megamenu effect1">
-                                                                                <li class="active menu-item aligned-left"><a href="index.html" class="" data-hover="" data-toggle="">Home</a></li>
+                                                                                <li class="active menu-item aligned-left">@Html.ActionLink("Home", "Index", "Home")</li>
                                                                                 <li class="dropdown menu-item-329 aligned-left">
                                                                                     <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Workers <b class="caret"></b></a>
                                                                                     <ul class="dropdown-menu">
-                                                                                        <li class="menu-item-332 aligned-left"><a href="#">All Workers</a></li>
-                                                                                        <li class="menu-item-373 aligned-left"><a href="#">Add Worker</a></li>
-                                                                                        <li class="menu-item-394 aligned-left"><a href="#">Suspended Workers</a></li>
-                                                                                        <li class="menu-item-394 aligned-left"><a href="#">Disabled Workers</a></li>
+                                                                                        <li class="menu-item-332 aligned-left">@Html.ActionLink("All Workers", "Workers", "Admin")</li>
+                                                                                        <li class="menu-item-373 aligned-left">@Html.ActionLink("Add Worker", "AddWorker", "Admin")</li>
+                                                                                        <li class="menu-item-394 aligned-left">@Html.ActionLink("Suspended Workers", "SuspendedWorkers", "Admin")</li>
+                                                                                        <li class="menu-item-394 aligned-left">@Html.ActionLink("Disabled Workers", "DisabledWorkers", "Admin")</li>
                                                                                     </ul>
                                                                                 </li>
 
                                                                                 <li class="dropdown menu-item-329 aligned-left">
                                                                                     <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Units <b class="caret"></b></a>
                                                                                     <ul class="dropdown-menu">
-                                                                                        <li class="menu-item-332 aligned-left"><a href="#">All Units</a></li>
-                                                                                        <li class="menu-item-373 aligned-left"><a href="#">Add Unit</a></li>
+                                                                                        <li class="menu-item-332 aligned-left">@Html.ActionLink("Units", "Units", "Admin")</li>
+                                                                                        <li class="menu-item-373 aligned-left">@Html.ActionLink("AddUnit", "AddUnit", "Admin")</li>
                                                                                     </ul>
                                                                                 </li>
 
-                                                                                <li class="menu-item aligned-left"><a href="#" class="" data-hover="" data-toggle="">Register</a></li>
-                                                                                <li class="menu-item aligned-left"><a href="#" class="" data-hover="" data-toggle="">Settings</a></li>
-                                                                                <li class="menu-item aligned-left"><a href="#" class="" data-hover="" data-toggle="">Logs</a></li>
+
+                                                                                <li class="menu-item aligned-left">@Html.ActionLink("Register", "Register", "Home")</li>
+                                                                                <li class="menu-item aligned-left">@Html.ActionLink("Settings", "Settings", "Admin")</li>
+                                                                                <li class="menu-item aligned-left">@Html.ActionLink("Logs", "Logs", "Admin")</li>
 
                                                                             </ul>
                                                                         </div>
