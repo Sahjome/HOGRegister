@@ -2,34 +2,35 @@ Pages:
 General:
  - Login
  - forgot password
- - sign-in register screen
- - sign out register screen
- - profile view/edit
+ -> sign-in/sign register screen
+ -> profile view/edit
 Leader:
- - create/update new worker with fp
- - list all members table
- - member detail page (candidate details layout)
- - settings page for penalties, erring timespan, when to calculate penalties time of the day.
+ -> create/update new worker with fp
+ -> list all workers table/log
+ -> member detail page (candidate details layout)
+ -> settings page for penalties, erring timespan, when to calculate penalties time of the day.
 Admin:
- - dashboard with all units
- - report/logs table page with search & filter (candidates layout)
- - 4 columns grid with all sundays logs (jobs layout)
+ -> dashboard with all units
+ -> report/logs table page with search & filter (candidates layout)
+ -> 4 columns grid with all sundays logs (jobs layout)
 
 Menus:
  - Workers (candidates) jobs Layout
-  - All workers
-  - Add worker
-  - Suspended workers
-  - Disabled workers
+  -> All workers
+  -> Add worker
+  -> Suspended workers
+  -> Disabled workers
  - Register 
-  - sign-in
-  - sign-out
- - Rules/Settings
+  -> sign-in/ign-out
+ -> Rules/Settings
  - Units (Jobs) jobs Layout
-  - All units
-  - Add unit
+  -> All units
+  -> Add unit
  - Logs(Admin)
 
+========================================
+- how to add a dynamic input field for the units in add worker
+- Name, Unit, service, Tag, Sign-In, sign-out
 ========================================
 	SIZACH
 

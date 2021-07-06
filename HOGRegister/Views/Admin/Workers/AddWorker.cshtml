@@ -26,12 +26,12 @@
                 <input type="text" name="title" class="form-control" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
-                <label for="job_alert_form_widget-4_title">First Name</label>
-                <input type="text" name="first_name" class="form-control" id="job_alert_form_widget-4_title">
+                <label for="job_alert_form_widget-4_first_name">First Name</label>
+                <input type="text" name="first_name" class="form-control" id="job_alert_form_widget-4_first_name">
             </div><!-- /.form-group -->
             <div class="form-group">
-                <label for="job_alert_form_widget-4_title">Middle Name</label>
-                <input type="text" name="mid_name" class="form-control" id="job_alert_form_widget-4_title">
+                <label for="job_alert_form_widget-4_mid_name">Middle Name</label>
+                <input type="text" name="mid_name" class="form-control" id="job_alert_form_widget-4_mid_name">
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Last Name</label>
@@ -42,7 +42,7 @@
                 <input type="number" name="phone" class="form-control" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
-                <label for="job_alert_form_widget-4_title">Email</label>
+                <label for="job_alert_form_widget-4_email">Email</label>
                 <input type="email" name="email" class="form-control" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
@@ -55,18 +55,37 @@
                     <label class="radio-inline"><input type="radio" name="gender" value="female" class="input-radio" id="job_alert_form_widget-4_title">Female</label>
                     <label class="radio-inline"><input type="radio" name="gender" value="male" class="input-radio" id="job_alert_form_widget-4_title">Male</label>
                 </div>
-            </div><!-- /.form-group -->
-            <div class="form-group">
-                <label for="job_alert_form_widget-4_email_frequency">Unit</label>
-                <select name="unit" class="form-control select2-hidden-accessible" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
-                    <option value="">Select Unit</option>
-                    <option value="fad">FAD</option>
-                    <option value="media">MEDIA</option>
-                    <option value="tag">TAG</option>
-                </select>
+            </div>
+            <div class="filter-listing-form">
+                <div class="form-group form-group-category toggle-field  tax-checklist-field">
+                    <label class="heading-label"> Unit <i class="fa fa-angle-down" aria-hidden="true"></i></label>
+                    <div class="form-group-inner" style="display: block;">
+                        <ul class="terms-list circle-check level-0">
+                            <li class="list-item">
+                                <div class="list-item-inner">
+                                    <input id="fad" type="checkbox" name="filter-category[]" value="53">
+                                    <label for="fad">FAD</label>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-item-inner">
+                                    <input id="Media" type="checkbox" name="filter-category[]" value="54">
+                                    <label for="Media">Media</label>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-item-inner">
+                                    <input id="Ushering" type="checkbox" name="filter-category[]" value="57">
+                                    <label for="Ushering">Ushering</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-theme btn-login register apus-user-register">Next
+                <button class="btn btn-theme btn-login register apus-user-register">
+                    Next
                     <i class="next flaticon-right-arrow"></i>
                 </button>
             </div><!-- /.form-group -->
