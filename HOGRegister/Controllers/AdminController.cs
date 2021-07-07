@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,6 +9,7 @@ namespace HOGRegister.Controllers
 {
     public class AdminController : Controller
     {
+        string con = ConfigurationManager.ConnectionStrings["hog_register"].ConnectionString;
         // GET: Admin
         public ActionResult Index()
         {
