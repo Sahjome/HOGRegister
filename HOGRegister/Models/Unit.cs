@@ -7,10 +7,10 @@ namespace HOGRegister.Models
 {
     public class Unit
     {
-        int Id { get;}
-        string Name { get; set; }
-        string LeaderName { get; set; }
-        string Overview { get; set; }
-        string[] Responsibilities { get; set; }
+        public int Id { get;}
+        public string Name { get; set; }
+        public string LeaderName { get; set; }
+        public string Overview { get; set; }
+        public string[] Responsibilities { get; set; } //separated by ';'
     }
 }

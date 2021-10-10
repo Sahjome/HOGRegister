@@ -7,12 +7,12 @@ namespace HOGRegister.Models
 {
     public class Logs
     {
-        long Id { get; }
-        int WorkerId { get; set; }
-        int UnitId { get; set; }
-        DateTime SignIn { get; set; }
-        DateTime SignOut { get; set; }
-        int Tag { get; set; }
-        int Service { get; set; }
+        public long Id { get; }
+        public int WorkerId { get; set; }
+        public int UnitId { get; set; }
+        public DateTime SignIn { get; set; }
+        public DateTime SignOut { get; set; }
+        public int Tag { get; set; }
+        public int Service { get; set; }
     }
 }
