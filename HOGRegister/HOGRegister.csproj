@@ -183,10 +183,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\IBaseModelData.cs" />
+    <Compile Include="Domain\IDatabaseConnector.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Logs.cs" />
+    <Compile Include="Models\ProcedureData.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
