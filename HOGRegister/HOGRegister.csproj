@@ -184,6 +184,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\IBaseModelData.cs" />
+    <Compile Include="Domain\DatabaseConnector.cs" />
     <Compile Include="Domain\IDatabaseConnector.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -7,6 +7,10 @@ namespace HOGRegister.Models
 {
     public class ProcedureResponse
     {
+        ///<summary>
+        ///Register all procedures in the database
+        ///with their expected response type
+        ///</summary>
         public int Id { get; set; }
         public int ProcName { get; set; }
         public ProcedureResponseType ResponseType { get; }
