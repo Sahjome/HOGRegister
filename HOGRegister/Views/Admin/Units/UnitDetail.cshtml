@@ -1,6 +1,6 @@
-﻿@{
+﻿@model HOGRegister.Models.Unit
+@{
     Layout = "~/Views/Shared/DetailsLayout.cshtml";
-    ViewBag.Title = "FAD";
 }
 
 <!-- InnerPage menu header begin -->
@@ -10,7 +10,7 @@
             <div class="wrapper-breads-inner">
                 <div class="breadscrumb-inner flex-middle-sm clearfix">
                     <div class="ali-right">
-                        <h2 class="bread-title">FAD</h2>
+                        <h2 class="bread-title">@Model.Name</h2>
                     </div>
                 </div>
             </div>
@@ -37,12 +37,12 @@
                                         </div>
                                     </div>
                                     <div class="inner-info">
-                                        <h1 class="job-detail-title">Software Development</h1>
-                                        <div class="job-location with-icon"><i class="ti-location-pin"></i> 91 Rue Taitbout 75009 Paris</div>
+                                        <h1 class="job-detail-title">@Model.Name</h1>
+                                        @*<div class="job-location with-icon"><i class="ti-location-pin"></i> 91 Rue Taitbout 75009 Paris</div>*@
                                     </div>
                                 </div>
 
-                                <div class="job-information clearfix">
+                                @*<div class="job-information clearfix">
                                     <ul class="list-detail-candidate">
                                         <li>
                                             <div class="job-salary with-icon"><i class="ti-credit-card"></i> $<span class="price-text">30</span> - $<span class="price-text">35</span> per month</div>
@@ -76,7 +76,7 @@
                                             <div class="job-deadline with-icon"><i class="ti-credit-card"></i> June 29, 2019</div>
                                         </li>
                                     </ul>
-                                </div>
+                                </div>*@
 
                             </div>
 
@@ -89,19 +89,7 @@
                                     </div>
                                     <div class="detail-wrapper-body">
                                         <p>
-                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                            blanditiis praesentium voluptatum deleniti atque corrupti quos
-                                            dolores et quas molestias excepturi sint occaecati cupiditate
-                                            non provident, similique sunt in culpa qui officia deserunt
-                                            mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                                            rerum facilis est et expedita distinctio.
-                                        </p>
-                                        <p>
-                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                            blanditiis praesentium voluptatum deleniti atque corrupti quos
-                                            dolores et quas molestias excepturi sint occaecati cupiditate
-                                            non provident, similique sunt in culpa qui officia deserunt
-                                            mollitia animi, id est laborum et dolorum fuga.
+                                            @Model.Overview
                                         </p>
                                     </div>
                                 </div>
@@ -112,27 +100,12 @@
                                     </div>
                                     <div class="detail-wrapper-body">
                                         <ul class="detail-list">
-                                            <li>
-                                                Execute all visual design stages from concept to final
-                                                hand-off to engineering
-                                            </li>
-                                            <li>Proven work experienceas a web designer</li>
-                                            <li>
-                                                Conceptualize original website design ideas that bring
-                                                simplicity and user friendliness to complex roadblocks
-                                            </li>
-                                            <li>
-                                                Create wireframes, storyboards, user flows, process flows
-                                                and site maps to communicate interaction and design ideas
-                                            </li>
-                                            <li>
-                                                Present and defend designs and key deliverables to peers and
-                                                executive level stakeholders
-                                            </li>
-                                            <li>
-                                                Establish and promote design guidelines, best practices and
-                                                standards
-                                            </li>
+                                            @foreach (var item in Model.Responsibilities.Split(';'))
+                                            {
+                                                <li>
+                                                    @item
+                                                </li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>
@@ -143,7 +116,7 @@
 
                         </div>
                         <!-- including members begin -->
-                        <div class="col-xs-12">
+                        <!--<div class="col-xs-12">
                             <div class="widget releated-jobs">
                                 <h4 class="widget-title">
                                     Unit Workers
@@ -165,13 +138,12 @@
                                                     </div>
                                                     <a class="btn btn-browse" href="#">Browse Unit</a>
                                                 </div>
-                                            </article><!-- #post-## -->
-
+                                            </article>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <!-- including members end -->
                     </div>
                 </article>

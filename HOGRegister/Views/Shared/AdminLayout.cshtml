@@ -79,8 +79,8 @@
                     <ul class="sub-menu">
                         <li id="menu-item-366" class="menu-item-366">@Html.ActionLink("All Workers", "Workers", "Admin")</li>
                         <li id="menu-item-363" class="menu-item-363">@Html.ActionLink("Add Worker", "AddWorker", "Admin")</li>
-                        <li id="menu-item-362" class="menu-item-362">@Html.ActionLink("Suspended Workers", "SuspendedWorkers", "Admin")</li>
-                        <li id="menu-item-385" class="menu-item-385">@Html.ActionLink("Disabled Workers", "DisabledWorkers", "Admin")</li>
+                        <li id="menu-item-362" class="menu-item-362">@Html.ActionLink("Suspended Workers", "StatusWorkers", "Admin", new { statusId = (int)HOGRegister.Models.WorkerStatus.Suspended }, null)</li>
+                        <li id="menu-item-385" class="menu-item-385">@Html.ActionLink("Disabled Workers", "StatusWorkers", "Admin", new { statusId = (int)HOGRegister.Models.WorkerStatus.Disabled }, null)</li>
                     </ul>
                 </li>
                 <li id="menu-item-365" class="has-submenu menu-item-365">
@@ -174,8 +174,8 @@
                                                                                     <ul class="dropdown-menu">
                                                                                         <li class="menu-item-332 aligned-left">@Html.ActionLink("All Workers", "Workers", "Admin")</li>
                                                                                         <li class="menu-item-373 aligned-left">@Html.ActionLink("Add Worker", "AddWorker", "Admin")</li>
-                                                                                        <li class="menu-item-394 aligned-left">@Html.ActionLink("Suspended Workers", "SuspendedWorkers", "Admin")</li>
-                                                                                        <li class="menu-item-394 aligned-left">@Html.ActionLink("Disabled Workers", "DisabledWorkers", "Admin")</li>
+                                                                                        <li id="menu-item-362" class="menu-item-362">@Html.ActionLink("Suspended Workers", "StatusWorkers", "Admin", new { statusId = (int)HOGRegister.Models.WorkerStatus.Suspended }, null)</li>
+                                                                                        <li id="menu-item-385" class="menu-item-385">@Html.ActionLink("Disabled Workers", "StatusWorkers", "Admin", new { statusId = (int)HOGRegister.Models.WorkerStatus.Disabled }, null)</li>
                                                                                     </ul>
                                                                                 </li>
 
@@ -450,7 +450,7 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                 ©
-                                                                Copyright 2021 &#8211; For House of Grace Church.
+                                                                Copyright @DateTime.Now.Year.ToString() &#8211; For House of Grace Church.
                                                             </div>
                                                         </div>
                                                     </div>

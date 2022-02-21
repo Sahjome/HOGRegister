@@ -176,9 +176,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HOGRegister\HOGRegister.csproj">
+    <ProjectReference Include="..\HOGRegister\HOGRegister.WebApp.csproj">
       <Project>{EAFC73D0-D6B0-42B1-86C8-650613C8686B}</Project>
-      <Name>HOGRegister</Name>
+      <Name>HOGRegister.WebApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

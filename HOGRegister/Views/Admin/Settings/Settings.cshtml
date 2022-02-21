@@ -1,6 +1,10 @@
-﻿@{
+﻿@model HOGRegister.Models.Settings
+
+@{
     Layout = "~/Views/Shared/DetailsLayout.cshtml";
     ViewBag.Title = "Settings";
+    int j = 5;
+
 }
 
 
@@ -71,53 +75,64 @@
                                                                     <h3 class="title">Services</h3><br>
                                                                     <div role="form" class="wpcf7" id="wpcf7-f151-p19-o1" lang="en-US" dir="ltr">
                                                                         <div class="screen-reader-response"></div>
-                                                                        <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                                        <form action="~/Admin/Settings" method="post" class="wpcf7-form" novalidate="novalidate">
 
                                                                             <div class="contact-us">
                                                                                 <div class="form-group">
-                                                                                    <label>Service Count:</label><br>
-                                                                                    <span class="wpcf7-form-control-wrap your-name"><input type="number" name="service_count" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Services per week"></span>
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="job_alert_form_widget-4_email_frequency">Service Day:</label>
-                                                                                    <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
-                                                                                        <option value="">Select Service Day</option>
-                                                                                        <option value="sunday">SUNDAY</option>
-                                                                                        <option value="monday">MONDAY</option>
-                                                                                        <option value="tuesday">TUESDAY</option>
-                                                                                        <option value="wednesday">WEDNESDAY</option>
-                                                                                        <option value="thursday">THURSDAY</option>
-                                                                                        <option value="friday">FRIDAY</option>
-                                                                                        <option value="saturday">SATURDAY</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label>Erring Period:</label> <small>(number of absential before action)</small><br>
+                                                                                    <label for="job_alert_form_widget-4_title">Status</label>
+                                                                                    <div>
+                                                                                        @if (Model.Status == "ON")
+                                                                                        {
+                                                                                            <label class="radio-inline"><input type="radio" name="Status" value="ON" class="input-radio" id="job_alert_form_widget-4_title" checked>ON</label>
+                                                                                            <label class="radio-inline"><input type="radio" name="Status" value="OFF" class="input-radio" id="job_alert_form_widget-4_title">OFF</label>
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            <label class="radio-inline"><input type="radio" name="Status" value="ON" class="input-radio" id="job_alert_form_widget-4_title">ON</label>
+                                                                                            <label class="radio-inline"><input type="radio" name="Status" value="OFF" class="input-radio" id="job_alert_form_widget-4_title" checked>OFF</label>
+                                                                                        }
 
-                                                                                    <span class="wpcf7-form-control-wrap your-name"><input type="number" name="service_count" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="absential count in a row"></span>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-group">
+                                                                                    <label>Frequency:</label> <small>(how often should the calculation be done in days)</small><br>
+
+                                                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                                                        <input type="number" name="Frequency" value="@Model.Frequency" size="5
+                                                                                               " class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false">
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <div class="form-group">
+                                                                                    <label>Erring Period:</label> <small>(number of absential weeks in days action)</small><br>
+
+                                                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                                                        <input type="number" name="ActionPeriod" value="@Model.ActionPeriod" size="5
+                                                                                               " class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="days of absential count in a row">
+                                                                                    </span>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label for="job_alert_form_widget-4_email_frequency">Action Type:</label>
-                                                                                    <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
-                                                                                        <option value="">Select action type</option>
-                                                                                        <option value="suspend">SUSPEND</option>
-                                                                                        <option value="disable">DISABLE</option>
-                                                                                        <option value="nothing">NOTHING</option>
 
-                                                                                    </select>
-                                                                                </div><div class="form-group">
-                                                                                    <label for="job_alert_form_widget-4_email_frequency">Action Time:</label>
-                                                                                    <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
-                                                                                        <option value="">Select action time</option>
-                                                                                        <option value="03">03:00 AM</option>
-                                                                                        <option value="08">08:00 AM</option>
-                                                                                        <option value="13">01:00 PM</option>
+                                                                                    <div>
+                                                                                        @foreach (string action in Enum.GetNames(typeof(HOGRegister.Models.ActionValue)))
+                                                                                        {
+                                                                                            if (Model.Action == (int)Enum.Parse(typeof(HOGRegister.Models.ActionValue), action))
+                                                                                            {
+                                                                                                <label class="radio-inline"><input type="radio" name="Action" value="@((int)Enum.Parse(typeof(HOGRegister.Models.ActionValue), action))" class="input-radio" id="job_alert_form_widget-4_title" checked />@string.Format("{0}", action.ToString())</label>
 
-                                                                                        <option value="18">06:00 PM</option>
-                                                                                        <option value="23">11:00 PM</option>
-                                                                                    </select>
-                                                                                </div><div class="form-group">
-                                                                                    <input type="submit" value="UPDATE SERVICES" class="wpcf7-form-control wpcf7-submit btn btn-theme btn-sm"><span class="ajax-loader"></span>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                <label class="radio-inline"><input type="radio" name="Action" value="@((int)Enum.Parse(typeof(HOGRegister.Models.ActionValue), action))" class="input-radio" id="job_alert_form_widget-4_title" />@string.Format("{0}", action.ToString())</label>
+                                                                                            }
+                                                                                        }
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <input type="submit" value="UPDATE SERVICE" class="wpcf7-form-control wpcf7-submit btn btn-theme btn-sm"><span class="ajax-loader"></span>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="wpcf7-response-output wpcf7-display-none"></div>
@@ -131,57 +146,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="elementor-element elementor-element-8dadcd5 elementor-column elementor-col-50 elementor-top-column" data-id="8dadcd5" data-element_type="column">
-                                            <div class="elementor-column-wrap  elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-203ebe1 elementor-widget elementor-widget-text-editor" data-id="203ebe1" data-element_type="widget" data-widget_type="text-editor.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="elementor-text-editor elementor-clearfix">
-                                                                <div class="wrapper-contact">
-                                                                    <div class="contact-icon text-theme"><i class="fa fa-tasks"></i></div>
-                                                                    <h3 class="title">Reports</h3><br>
-                                                                    <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
 
-                                                                        <div class="contact-us">
-
-                                                                            <div class="form-group">
-                                                                                <label for="job_alert_form_widget-4_email_frequency">Report Day:</label>
-                                                                                <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
-                                                                                    <option value="">Select report day</option>
-                                                                                    <option value="sunday">SUNDAY</option>
-                                                                                    <option value="monday">MONDAY</option>
-                                                                                    <option value="tuesday">TUESDAY</option>
-                                                                                    <option value="wednesday">WEDNESDAY</option>
-                                                                                    <option value="thursday">THURSDAY</option>
-                                                                                    <option value="friday">FRIDAY</option>
-                                                                                    <option value="saturday">SATURDAY</option>
-                                                                                </select>
-                                                                            </div>
-
-                                                                            <div class="form-group">
-                                                                                <label for="job_alert_form_widget-4_email_frequency">Reporting Time:</label>
-                                                                                <select name="week_day" class="form-control" id="job_alert_form_widget-4_email_frequency" tabindex="-1" aria-hidden="true">
-                                                                                    <option value="">Select reporting time</option>
-                                                                                    <option value="03">03:00 AM</option>
-                                                                                    <option value="08">08:00 AM</option>
-                                                                                    <option value="13">01:00 PM</option>
-
-                                                                                    <option value="18">06:00 PM</option>
-                                                                                    <option value="23">11:00 PM</option>
-                                                                                </select>
-                                                                            </div><div class="form-group">
-                                                                                <input type="submit" value="UPDATE REPORTS" class="wpcf7-form-control wpcf7-submit btn btn-theme btn-sm"><span class="ajax-loader"></span>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </section>

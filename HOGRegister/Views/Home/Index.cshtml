@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<HOGRegister.Models.HomeMetrics>
+
+@{
     ViewBag.Title = "HOG Workers Register";
 }
 
@@ -149,7 +151,13 @@
                                                                                                 <span class="verify"><i class="fa fa-check"></i></span>
                                                                                             </div>
                                                                                             <div class="info-right">
-                                                                                                <h2 class="title"> 309 </h2>
+                                                                                                <h2 class="title">
+                                                                                                    @if (Model == null) { }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        @Model.Where(x => x.Unit == "Number of Active Workers").Select(x => x.Count);
+                                                                                                    }
+                                                                                                </h2>
                                                                                                 <div class="description"> Active Workers </div>
                                                                                             </div>
                                                                                         </div>
@@ -171,7 +179,13 @@
                                                                                                 <span class="verify"><i class="fa fa-check"></i></span>
                                                                                             </div>
                                                                                             <div class="info-right">
-                                                                                                <h2 class="title"> 16 </h2>
+                                                                                                <h2 class="title">
+                                                                                                    @if (Model == null) { }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        @Model.Where(x => x.Unit == "Number of Units").Select(x => x.Count);
+                                                                                                    }
+                                                                                                </h2>
                                                                                                 <div class="description"> Units </div>
                                                                                             </div>
                                                                                         </div>
@@ -193,7 +207,13 @@
                                                                                                 <span class="verify"><i class="fa fa-check"></i></span>
                                                                                             </div>
                                                                                             <div class="info-right">
-                                                                                                <h2 class="title"> 4 </h2>
+                                                                                                <h2 class="title">
+                                                                                                    @if (Model == null) { }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        @Model.Where(x => x.Unit == "Number of Leaders").Select(x => x.Count);
+                                                                                                    }
+                                                                                                </h2>
                                                                                                 <div class="description"> Leaders </div>
                                                                                             </div>
                                                                                         </div>
@@ -273,196 +293,51 @@
                                                                  data-id="d1f011e" data-element_type="section">
                                                             <div class="elementor-container elementor-column-gap-extended">
                                                                 <div class="elementor-row">
-                                                                    <!-- unit box begin -->
-                                                                    <div class="elementor-element elementor-element-86b2a93 elementor-column elementor-col-25 elementor-inner-column" data-id="86b2a93" data-element_type="column">
-                                                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                                                            <div class="elementor-widget-wrap">
-                                                                                <div class="elementor-element elementor-element-aa31707 elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
-                                                                                     data-id="aa31707" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="workup_job_board_category_banner.default">
-                                                                                    <div class="elementor-widget-container">
-                                                                                        <div class="widget-job-category-banner">
-                                                                                            <a href="#">
-                                                                                                <div class="category-banner-inner justify-content-center flex-middle">
-                                                                                                    <div class="content-inner">
-                                                                                                        <div class="category-icon text-theme">
-                                                                                                            <i class="icon-bargraph"></i>
-                                                                                                        </div>
-                                                                                                        <div class="inner">
-                                                                                                            <h4 class="title"> Accounting & Finance </h4>
-                                                                                                            <div class="number"> <span>3</span> Members </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="category-icon second-icon text-theme">
-                                                                                                        <i class="icon-bargraph"></i>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- unitbox end -->
-                                                                    <div class="elementor-element elementor-element-fb34064 elementor-column elementor-col-25 elementor-inner-column" data-id="fb34064" data-element_type="column">
-                                                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                                                            <div class="elementor-widget-wrap">
-                                                                                <div class="elementor-element elementor-element-088711d elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
-                                                                                     data-id="088711d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:150}"
-                                                                                     data-widget_type="workup_job_board_category_banner.default">
-                                                                                    <div class="elementor-widget-container">
-                                                                                        <div class="widget-job-category-banner ">
-                                                                                            <a href="#">
-                                                                                                <div class="category-banner-inner justify-content-center flex-middle">
-                                                                                                    <div class="content-inner">
-                                                                                                        <div class="category-icon text-theme">
-                                                                                                            <i class="icon-tools-2"></i>
-                                                                                                        </div>
-                                                                                                        <div class="inner">
-                                                                                                            <h4 class="title"> Automotive Jobs </h4>
-                                                                                                            <div class="number"> <span>2</span> Members </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="category-icon second-icon text-theme">
-                                                                                                        <i class="icon-tools-2"></i>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-ef64cf3 elementor-column elementor-col-25 elementor-inner-column"
-                                                                         data-id="ef64cf3" data-element_type="column">
-                                                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                                                            <div class="elementor-widget-wrap">
-                                                                                <div class="elementor-element elementor-element-3b0a668 elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
-                                                                                     data-id="3b0a668" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="workup_job_board_category_banner.default">
-                                                                                    <div class="elementor-widget-container">
-                                                                                        <div class="widget-job-category-banner">
-                                                                                            <a href="#">
-                                                                                                <div class="category-banner-inner justify-content-center flex-middle">
-                                                                                                    <div class="content-inner">
-                                                                                                        <div class="category-icon text-theme">
-                                                                                                            <i class="ti-briefcase"></i>
-                                                                                                        </div>
-                                                                                                        <div class="inner">
-                                                                                                            <h4 class="title"> Business </h4>
-                                                                                                            <div class="number"> <span>3</span> Members </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="category-icon second-icon text-theme">
-                                                                                                        <i class="ti-briefcase"></i>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-b728c43 elementor-column elementor-col-25 elementor-inner-column"
-                                                                         data-id="b728c43" data-element_type="column">
-                                                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                                                            <div class="elementor-widget-wrap">
-                                                                                <div class="elementor-element elementor-element-be52b9f elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
-                                                                                     data-id="be52b9f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:450}" data-widget_type="workup_job_board_category_banner.default">
-                                                                                    <div class="elementor-widget-container">
-                                                                                        <div class="widget-job-category-banner ">
-                                                                                            <a href="#">
-                                                                                                <div class="category-banner-inner justify-content-center flex-middle">
-                                                                                                    <div class="content-inner">
-                                                                                                        <div class="category-icon text-theme">
-                                                                                                            <i class="ti-ruler-pencil"></i>
-                                                                                                        </div>
-                                                                                                        <div class="inner">
-                                                                                                            <h4 class="title"> Education Training </h4>
-                                                                                                            <div class="number"> <span>4</span> Members </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="category-icon second-icon text-theme">
-                                                                                                        <i class="ti-ruler-pencil"></i>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                        <section class="elementor-element elementor-element-6122046 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-                                                                 data-id="6122046" data-element_type="section">
-                                                            <div class="elementor-container elementor-column-gap-extended">
-                                                                <div class="elementor-row">
-                                                                    <div class="elementor-element elementor-element-a832053 elementor-column elementor-col-25 elementor-inner-column" data-id="a832053" data-element_type="column">
-                                                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                                                            <div class="elementor-widget-wrap">
-                                                                                <div class="elementor-element elementor-element-044928d elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
-                                                                                     data-id="044928d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="workup_job_board_category_banner.default">
-                                                                                    <div class="elementor-widget-container">
-                                                                                        <div class="widget-job-category-banner">
-                                                                                            <a href="#">
-                                                                                                <div class="category-banner-inner justify-content-center flex-middle">
-                                                                                                    <div class="content-inner">
-                                                                                                        <div class="category-icon text-theme">
-                                                                                                            <i class="ti-heart-broken"></i>
-                                                                                                        </div>
-                                                                                                        <div class="inner">
-                                                                                                            <h4 class="title"> Healthcare </h4>
-                                                                                                            <div class="number"> <span>2</span> Members </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="category-icon second-icon text-theme">
-                                                                                                        <i class="ti-heart-broken"></i>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-b6360aa elementor-column elementor-col-25 elementor-inner-column" data-id="b6360aa" data-element_type="column">
-                                                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                                                            <div class="elementor-widget-wrap">
-                                                                                <div class="elementor-element elementor-element-47650df elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
-                                                                                     data-id="47650df" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:150}" data-widget_type="workup_job_board_category_banner.default">
-                                                                                    <div class="elementor-widget-container">
-                                                                                        <div class="widget-job-category-banner ">
-                                                                                            <a href="#">
-                                                                                                <div class="category-banner-inner justify-content-center flex-middle">
-                                                                                                    <div class="content-inner">
-                                                                                                        <div class="category-icon text-theme">
-                                                                                                            <i class="icon-wine"></i>
-                                                                                                        </div>
-                                                                                                        <div class="inner">
-                                                                                                            <h4 class="title"> Restaurant Food </h4>
-                                                                                                            <div class="number"> <span>4</span> Members </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="category-icon second-icon text-theme">
-                                                                                                        <i class="icon-wine"></i>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                    @if (Model != null && Model.Count() > 0)
+                                                                    {
 
+                                                                        foreach (var item in Model.Where(c => c.Id > 0))
+                                                                        {
+                                                                            <div class="col-md-3">
+                                                                                <div class="elementor-element elementor-element-86b2a93 elementor-column elementor-col-25 elementor-inner-column" data-id="86b2a93" data-element_type="column">
+                                                                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                                                                        <div class="elementor-widget-wrap">
+                                                                                            <div class="elementor-element elementor-element-aa31707 elementor-invisible elementor-widget elementor-widget-workup_job_board_category_banner"
+                                                                                                 data-id="aa31707" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="workup_job_board_category_banner.default">
+                                                                                                <div class="elementor-widget-container">
+                                                                                                    <div class="widget-job-category-banner">
+                                                                                                        <a href="~/Admin/UnitDetail/@item.Id">
+                                                                                                            <div class="category-banner-inner justify-content-center flex-middle">
+                                                                                                                <div class="content-inner">
+                                                                                                                    <div class="category-icon text-theme">
+                                                                                                                        <i class="icon-bargraph"></i>
+                                                                                                                    </div>
+                                                                                                                    <div class="inner">
+                                                                                                                        <h4 class="title"> @(item.Unit) </h4>
+                                                                                                                        <div class="number"> <span>@item.Count</span> Members </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="category-icon second-icon text-theme">
+                                                                                                                    <i class="icon-bargraph"></i>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            
+                                                                        }
+                                                                    }
                                                                 </div>
                                                             </div>
                                                         </section>
+                                                       
+
                                                         <div class="elementor-element elementor-element-34cb250 elementor-widget elementor-widget-spacer"
                                                              data-id="34cb250" data-element_type="widget"
                                                              data-widget_type="spacer.default">
@@ -472,6 +347,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                         <section class="elementor-element elementor-element-f244caa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-inner-section"
                                                                  data-id="f244caa" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;,&quot;animation_delay&quot;:200}">
                                                             <div class="elementor-container elementor-column-gap-extended">
@@ -484,7 +360,7 @@
                                                                                     <div class="elementor-widget-container">
                                                                                         <div class="elementor-button-wrapper">
                                                                                             @Html.ActionLink("Browse All Units", "Units", "Admin", null, new { @class = "elementor-button-link elementor-button elementor-size-lg", @role = "button" })
-                                                                                           
+
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>

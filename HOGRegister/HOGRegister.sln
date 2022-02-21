@@ -3,9 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOGRegister", "HOGRegister.csproj", "{EAFC73D0-D6B0-42B1-86C8-650613C8686B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOGRegister.WebApp", "HOGRegister.WebApp.csproj", "{EAFC73D0-D6B0-42B1-86C8-650613C8686B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOGRegister.Tests", "..\HOGRegister.Tests\HOGRegister.Tests.csproj", "{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HOGRegister.Service", "HOGRegister.Service", "{DC017D81-CDBC-4517-823A-A298219AAB7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HOGRegister.WebApp", "HOGRegister.WebApp", "{47CB5A29-735D-4A0C-A200-15F1C229484C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HOGRegister.Scanner", "HOGRegister.Scanner", "{63AC3EFD-5109-4495-A0F3-7CE4C626B747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPScannerApp", "..\..\FPScannerApp\FPScannerApp.csproj", "{688A2207-3634-453B-9822-849AF8463036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOGRegister.Service", "..\HOGRegister.Service\HOGRegister.Service\HOGRegister.Service.csproj", "{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,9 +51,34 @@ Global
 		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Release|x64.Build.0 = Release|x64
 		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Release|x86.ActiveCfg = Release|Any CPU
 		{BCAB9942-D5BB-4640-9EE9-601A353B1AEE}.Release|x86.Build.0 = Release|Any CPU
+		{688A2207-3634-453B-9822-849AF8463036}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Debug|x64.ActiveCfg = Debug|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Debug|x86.ActiveCfg = Debug|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Debug|x86.Build.0 = Debug|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Release|Any CPU.ActiveCfg = Release|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Release|x64.ActiveCfg = Release|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Release|x86.ActiveCfg = Release|x86
+		{688A2207-3634-453B-9822-849AF8463036}.Release|x86.Build.0 = Release|x86
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Debug|x64.Build.0 = Debug|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Debug|x86.Build.0 = Debug|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Release|x64.ActiveCfg = Release|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Release|x64.Build.0 = Release|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Release|x86.ActiveCfg = Release|Any CPU
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EAFC73D0-D6B0-42B1-86C8-650613C8686B} = {47CB5A29-735D-4A0C-A200-15F1C229484C}
+		{688A2207-3634-453B-9822-849AF8463036} = {63AC3EFD-5109-4495-A0F3-7CE4C626B747}
+		{9357AE50-0F16-4516-BCC6-25DB9A9C2E58} = {DC017D81-CDBC-4517-823A-A298219AAB7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA9CCB91-3FCE-4EAA-80C5-D1C7F774A03B}

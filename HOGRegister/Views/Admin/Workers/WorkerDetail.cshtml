@@ -1,4 +1,5 @@
-﻿@{
+﻿@model HOGRegister.Models.Worker
+@{
     Layout = "~/Views/Shared/DetailsLayout.cshtml";
     ViewBag.Title = "Worker Detail";
 }
@@ -37,7 +38,7 @@
                                         </div>
                                     </div>
                                     <div class="inner-info">
-                                        <h1 class="job-detail-title">Full Name with Title</h1>
+                                        <h1 class="job-detail-title">@string.Format(@"{0} {1} {2} {3}", Model.Title, Model.Firstname, Model.Midname,  Model.Lastname).Replace("  ", " ")</h1>
                                         <div class="candidate-job"> Senior Pastor</div>
                                     </div>
                                 </div>
@@ -46,19 +47,19 @@
                                 <div class="job-information clearfix">
                                     <ul class="list-detail-candidate">
                                         <li>
-                                            <div class="job-phone"> <i class="fa fa-user-circle-o"></i> Female </div>
+                                            <div class="job-phone"> <i class="fa fa-user-circle-o"></i> @Model.Gender </div>
                                         </li>
                                         <li>
-                                            <div class="job-phone"> <i class="fa fa-phone"></i> +610 123 789 </div>
+                                            <div class="job-phone"> <i class="fa fa-phone"></i> @Model.Phone </div>
                                         </li>
                                         <li>
-                                            <div class="job-email"> <i class="ti-email"></i> Designblue@apus.com</div>
+                                            <div class="job-email"> <i class="ti-email"></i> @string.Format(@"{0}", Model.Email ?? string.Empty)</div>
                                         </li>
                                         <li>
-                                            <div class="job-location"> <i class="flaticon-location-pin"></i>Paris </div>
+                                            <div class="job-location"> <i class="flaticon-location-pin"></i>@string.Format(@"{0}", Model.Address ?? string.Empty) </div>
                                         </li>
                                         <li>
-                                            <div class="job-deadline with-icon"> <i class="fa fa-calendar-check-o"></i> June 29, 2019</div>
+                                            <div class="job-deadline with-icon"> <i class="fa fa-calendar-check-o"></i> @string.Format(@"{0}", (HOGRegister.Models.UserRole)Model.Role)</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -69,26 +70,22 @@
                                         <h5>Units/FCs</h5>
                                     </div>
                                     <div>
-                                        <ul class="list-detail-candidate">
-                                            <li class="col-sm-6 col-md-3 col-xs-12">
-                                                <div class="job-location">
-                                                    <i class="fa fa-minus"></i>
-                                                    <a href="#">FAD</a>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-6 col-md-3 col-xs-12">
-                                                <div class="job-location">
-                                                    <i class="fa fa-minus"></i>
-                                                    <a href="#">Zenith</a>
-                                                </div>
-                                            </li>
-                                            <li class="col-sm-6 col-md-3 col-xs-12">
-                                                <div class="job-location">
-                                                    <i class="fa fa-minus"></i>
-                                                    <a href="#">Media</a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        @if (Model.Units != null || Model.Units.Count > 0)
+                                        {
+                                            <ul class="list-detail-candidate">
+                                                @foreach (var unit in Model.Units)
+                                                {
+                                                <li class="col-sm-6 col-md-3 col-xs-12">
+                                                    <div class="job-location">
+                                                        <i class="fa fa-minus"></i>
+                                                        <a href="~/Admin/UnitDetail/@unit.Id">@Html.DisplayFor(item => unit.Name)</a>
+                                                    </div>
+                                                </li>
+                                                }
+                                                
+                                            </ul>
+
+                                        }
                                     </div>
                                 </div>
                                 <!--units begin-->

@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     Layout = "~/Views/Shared/DetailsLayout.cshtml";
     ViewBag.Title = "Add Unit";
 }
@@ -21,26 +22,48 @@
 <!-- InnerPage content lists begin -->
 <section id="main-contianer" class="main-content container inner">
     <div class="form-cover">
-        <form method="get" action="#" class="job-alert-form-reform">
+        @*<div class="sign-in-demo-notice">
+            @ViewBag
+            <strong>candidate</strong>  or <strong>employer</strong><br> Password: <strong>demo</strong>
+        </div>*@
+        @if (!string.IsNullOrEmpty(ViewBag.Message) && ViewBag.Message == "Created")
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Unit Saved.</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        else if(!string.IsNullOrEmpty(ViewBag.Message) && ViewBag.Message != "Created")
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Unit didn't save Correctly.'</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <form method="post" action="~/Admin/AddUnit" class="job-alert-form-reform">
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Unit Name</label>
-                <input type="text" name="name" class="form-control" id="job_alert_form_widget-4_title">
+                <input type="text" name="Name" class="form-control" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Unit Leader</label>
-                <input type="text" name="leader" class="form-control" id="job_alert_form_widget-4_title">
+                <input type="text" name="Leader" class="form-control" id="job_alert_form_widget-4_title">
             </div>
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Overview</label>
-                <textarea name="overview" maxlength="200" placeholder="max of 200 words..." class="form-control" id="job_alert_form_widget-4_title"></textarea>
+                <textarea name="Overview" maxlength="200" placeholder="max of 200 words..." class="form-control" id="job_alert_form_widget-4_title"></textarea>
             </div>
             <div class="form-group">
                 <label for="job_alert_form_widget-4_email_frequency">Responsibilities</label>
-                <textarea name="resp" maxlength="200" placeholder="separate responsibilities with a new line" class="form-control" id="job_alert_form_widget-4_title"></textarea>
+                <textarea name="Responsibilities" maxlength="200" placeholder="separate responsibilities with a semi column ;" class="form-control" id="job_alert_form_widget-4_title"></textarea>
 
             </div><!-- /.form-group -->
             <div class="form-group">
-                <button class="button">Save Unit</button>
+                <button type="submit" class="button">Save Unit</button>
             </div><!-- /.form-group -->
         </form>
     </div>

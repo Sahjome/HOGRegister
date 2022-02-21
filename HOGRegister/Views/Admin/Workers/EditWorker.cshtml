@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HOGRegister.Models.Worker
+
+@{
     Layout = "~/Views/Shared/DetailsLayout.cshtml";
     ViewBag.Title = "Edit Worker Profile";
 }
@@ -20,69 +22,115 @@
 <!-- InnerPage content lists begin -->
 <section id="main-contianer" class="main-content container inner">
     <div class="form-cover">
-        <form method="get" action="#" class="job-alert-form-reform">
+        <form method="post" action="~/Admin/EditWorker" class="job-alert-form-reform">
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Title</label>
-                <input type="text" name="title" class="form-control" value="Miss" id="job_alert_form_widget-4_title">
+                <input type="text" name="title" class="form-control" value="@string.Format(@"{0}", Model.Title ?? string.Empty)" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">First Name</label>
-                <input type="text" name="first_name" class="form-control" value="Claire" id="job_alert_form_widget-4_title">
+                <input type="text" name="Firstname" class="form-control" value="@string.Format(@"{0}", Model.Firstname ?? string.Empty)" id="job_alert_form_widget-4_title" required>
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Middle Name</label>
-                <input type="text" name="mid_name" class="form-control" value="Oge" id="job_alert_form_widget-4_title">
+                <input type="text" name="mid_name" class="form-control" value="@string.Format(@"{0}", Model.Midname ?? string.Empty)" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Last Name</label>
-                <input type="text" name="last_name" class="form-control" value="Harry" id="job_alert_form_widget-4_title">
+                <input type="text" name="Lastname" class="form-control" value="@string.Format(@"{0}", Model.Lastname ?? string.Empty)" id="job_alert_form_widget-4_title" required>
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Phone</label>
-                <input type="number" name="phone" class="form-control" value="2349084321843" id="job_alert_form_widget-4_title">
+                <input type="number" name="Phone" class="form-control" value="@string.Format(@"{0}", Model.Phone ?? string.Empty)" id="job_alert_form_widget-4_title" required>
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Email</label>
-                <input type="email" name="email" class="form-control" value="email@domain.tld" id="job_alert_form_widget-4_title">
+                <input type="email" name="Email" class="form-control" value="@string.Format(@"{0}", Model.Email ?? string.Empty)" id="job_alert_form_widget-4_title">
             </div><!-- /.form-group -->
             <div class="form-group">
                 <label for="job_alert_form_widget-4_title">Address</label>
-                <input type="text" name="address" class="form-control" value="Satellite Town, Lagos." id="job_alert_form_widget-4_title">
+                <input type="text" name="Address" class="form-control" value="@string.Format(@"{0}", Model.Address ?? string.Empty)" id="job_alert_form_widget-4_title" required>
             </div>
+            <input type="hidden" name="Gender" value="@Model.Gender" />
+            <input type="hidden" name="Id" value="@Model.Id" />
+           
+            <div class="form-group">
+                <label for="job_alert_form_widget-4_title">Status</label>
+                <div>
+                    <label class="radio-inline"><input type="radio" name="Status" value="@((int)HOGRegister.Models.WorkerStatus.Active)" class="input-radio" id="job_alert_form_widget-4_title" checked ="@(Model.Status == (int)HOGRegister.Models.WorkerStatus.Active)">Activate</label>
+                    <label class="radio-inline"><input type="radio" name="Status" value="@((int)HOGRegister.Models.WorkerStatus.Inactive)" class="input-radio" id="job_alert_form_widget-4_title"  checked ="@(Model.Status == (int)HOGRegister.Models.WorkerStatus.Inactive)">Deactivate</label>
+                    <label class="radio-inline"><input type="radio" name="Status" value="@((int)HOGRegister.Models.WorkerStatus.Suspended)" class="input-radio" id="job_alert_form_widget-4_title"  checked ="@(Model.Status == (int)HOGRegister.Models.WorkerStatus.Suspended)">Suspend</label>
+                    <label class="radio-inline"><input type="radio" name="Status" value="@((int)HOGRegister.Models.WorkerStatus.Disabled)" class="input-radio" id="job_alert_form_widget-4_title"  checked ="@(Model.Status == (int)HOGRegister.Models.WorkerStatus.Disabled)">Disable</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="job_alert_form_widget-4_title">Role</label>
+                <div>
+                    <label class="radio-inline"><input type="radio" name="Role" value="@((int)HOGRegister.Models.UserRole.Admin)" class="input-radio" id="job_alert_form_widget-4_title" checked ="@(Model.Status == (int)HOGRegister.Models.UserRole.Admin)" required>@string.Format(@"{0}", HOGRegister.Models.UserRole.Admin)</label>
+                    <label class="radio-inline"><input type="radio" name="Role" value="@((int)HOGRegister.Models.UserRole.Leader)" class="input-radio" id="job_alert_form_widget-4_title" checked ="@(Model.Status == (int)HOGRegister.Models.UserRole.Leader)" required>@string.Format(@"{0}", HOGRegister.Models.UserRole.Leader)</label>
+                    <label class="radio-inline"><input type="radio" name="Role" value="@((int)HOGRegister.Models.UserRole.Worker)" class="input-radio" id="job_alert_form_widget-4_title" checked ="@(Model.Status == (int)HOGRegister.Models.UserRole.Worker)" required>@string.Format(@"{0}", HOGRegister.Models.UserRole.Worker)</label>
+                </div>
+            </div>
+
             <div class="filter-listing-form">
                 <div class="form-group form-group-category toggle-field  tax-checklist-field">
                     <label class="heading-label"> Unit <i class="fa fa-angle-down" aria-hidden="true"></i></label>
                     <div class="form-group-inner" style="display: block;">
-                        <ul class="terms-list circle-check level-0">
-                            <li class="list-item">
-                                <div class="list-item-inner">
-                                    <input id="fad" type="checkbox" name="filter-category[]" value="53">
-                                    <label for="fad">FAD</label>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <div class="list-item-inner">
-                                    <input id="Media" type="checkbox" name="filter-category[]" value="54">
-                                    <label for="Media">Media</label>
-                                </div>
-                            </li>
-                            <li class="list-item">
-                                <div class="list-item-inner">
-                                    <input id="Ushering" type="checkbox" name="filter-category[]" value="57">
-                                    <label for="Ushering">Ushering</label>
-                                </div>
-                            </li>
-                        </ul>
+                        @if (ViewBag.Units != null || ViewBag.Units.Count() > 0)
+                            {
+                            <input type="hidden" name="Units" id="UnitId" />
+                            <ul class="terms-list circle-check level-0">
+                                @foreach (var unit in ViewBag.Units)
+                            {
+                                    <li class="list-item">
+                                        <div class="list-item-inner">
+                                            @if ((Model.Units != null || Model.Units.Count() > 0) && Model.Units.FirstOrDefault(x => x.Id == unit.Id) != null)
+                                            {
+                                                <input id="@unit.Name" type="checkbox" name="units" value=@unit.Id checked>
+                                                <label for="@unit.Name">@unit.Name</label>
+                        }
+                                            else
+                                            {
+                                                <input id="@unit.Name" type="checkbox" name="units" value=@unit.Id>
+                                                <label for="@unit.Name">@unit.Name</label>
+                    }
+
+                                        </div>
+                                    </li>
+                                    @*@Html.HiddenFor(m => unit.Id);
+                                @Html.HiddenFor(m => unit.Name);*@
+                                }
+                            </ul>
+                        }
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-theme btn-login register apus-user-register">
-                    Next
-                    <i class="next flaticon-right-arrow"></i>
-                </button>
+                <button type="submit" class="button">Save Unit</button>
+
+                @*<button type="submit" class="btn btn-theme btn-login register apus-user-register">
+                Next
+                <i class="next flaticon-right-arrow"></i>
+            </button>*@
             </div><!-- /.form-group -->
         </form>
     </div>
 </section>
 <!-- InnerPage content lists end -->
+<script>
+
+    function updatemark(arg)
+    {
+        var units = ""
+//Iterating the collection of checkboxes which checked marked
+        $('input[type=checkbox]').each(function () {
+            if (this.checked) {
+                units = units + $(this).val() + ","
+                //assign set value to hidden field
+                 $('#UnitId').val(abc);
+            }
+        });
+
+    }
+</script>  

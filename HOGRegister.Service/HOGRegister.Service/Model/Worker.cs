@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HOGRegister.Models
+namespace HOGRegister.Service.Model
 {
     public class Worker
     {
         public Worker()
         {
-            Units = new List<Unit>();
+            //Units = new List<Unit>();
         }
         public int Id { get; set; }
         public string Title { get; set; }
@@ -34,7 +34,7 @@ namespace HOGRegister.Models
             set { Role = (int)Role; }
         }
         public byte[] FingerPrint { get; set; }
-        public List<Unit> Units { get; set; }
+        //public List<Unit> Units { get; set; }
     }
 
     public enum UserRole

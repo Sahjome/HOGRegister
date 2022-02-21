@@ -1,4 +1,5 @@
-﻿@{
+﻿@model HOGRegister.Models.Worker
+@{
     Layout = "~/Views/Shared/DetailsLayout.cshtml";
 }
 
@@ -87,6 +88,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <!-- Finger Image boxes end-->
+                                                                    <input type="hidden" name="Id" class="form-control" value="@Model.Id" id="job_alert_form_widget-4_title">
+
                                                                     <!-- centered submit button begin-->
                                                                     <div class="candidates-pagination-wrapper main-pagination-wrapper">
                                                                         <div class="pagination ">

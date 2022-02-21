@@ -1,29 +1,15 @@
 ﻿@model IEnumerable<HOGRegister.Models.Worker>
 @{
     Layout = "~/Views/Shared/AdminLayout.cshtml";
-    
 }
 
 
-<!-- InnerPage breadcrumb begin -->
-<section id="apus-breadscrumb" class="breadcrumb-page apus-breadscrumb default ">
-    <div class="container">
-        <div class="wrapper-breads">
-            <div class="wrapper-breads-inner">
-                <div class="breadscrumb-inner flex-middle-sm clearfix">
-                    <div class="ali-right">
-                        <h2 class="bread-title">Workers</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- InnerPage menu header begin -->
 <div class="jobs-filter-top-sidebar-wrapper filter-top-sidebar-wrapper">
     <aside class="widget widget_job_filter_horizontal_widget">
         <div class="widget-filter-job-top">
             <div class="container">
-                <h2 class="widget-title"><span>Search workers </span></h2>
+                <h2 class="widget-title"><span>@ViewBag.Title workers </span></h2>
                 <!-- Search top form begin -->
                 <form method="get" action="#"
                       class="filter-job-form filter-listing-form filter-job-top">
@@ -68,8 +54,8 @@
         </div>
     </aside>
 </div>
-<!-- InnerPage breadcrumb end -->
-<!-- InnerPage content begin -->
+<!-- InnerPage menu header end -->
+<!-- InnerPage content lists begin -->
 <section id="main-container" class=" main-content container inner">
     <div class="row">
         <div id="main-content" class="col-sm-12 col-md-12 col-sm-12 col-xs-12">
@@ -89,7 +75,7 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                 <div class="jobs-listing-wrapper main-items-wrapper" data-display_mode="grid">
-                                                                    <!--<div class="jobs-alert-ordering-wrapper">
+                                                                    <div class="jobs-alert-ordering-wrapper">
                                                                         <div class="results-count"> Showing <span class="first">1</span> &ndash; <span class="last">2</span> of 2 results</div>
                                                                         <div class="jobs-ordering-wrapper">
                                                                             <form class="jobs-ordering" method="get" action="#">
@@ -102,9 +88,9 @@
                                                                                 </select>
                                                                                 <input type="hidden" name="paged" value="1" />
                                                                             </form>
-                                                                        </div>-->
+                                                                        </div>
                                                                         <!-- count/page form begin -->
-                                                                        <!--<form method="POST" action="#" class="form-workup-ppp">
+                                                                        <form method="POST" action="#" class="form-workup-ppp">
                                                                             <select name="jobs_ppp" onchange="this.form.submit()">
                                                                                 <option value="10" selected='selected'> 10 Per Page </option>
                                                                                 <option value="20"> 20 </option>
@@ -112,9 +98,9 @@
                                                                                 <option value="100"> 100 </option>
                                                                             </select>
                                                                             <input type="hidden" name="paged" value="1" />
-                                                                        </form>-->
+                                                                        </form>
                                                                         <!-- count/page form end -->
-                                                                    <!--</div>-->
+                                                                    </div>
 
 
                                                                     <div class="jobs-wrapper items-wrapper">
@@ -122,8 +108,7 @@
                                                                         <div class="row">
                                                                             @if (Model == null || Model.Count() <= 0)
                                                                             {
-                                                                                <p>No worker yet</p>
-                                                                                @Html.ActionLink("Add Worker", "AddWorker", "Admin");
+                                                                                <p>No @ViewBag.Title worker yet</p>
                                                                             }
                                                                             else
                                                                             {
@@ -134,11 +119,7 @@
                                                                                         <article class="job-grid post-859 job_listing type-job_listing status-publish hentry job_listing_type-internship job_listing_category-telecommunications job_listing_location-new-york job_listing_tag-design job_listing_tag-php job_listing_tag-web"
                                                                                                  data-latitude="40.64341405" data-longitude="-74.0009237496013">
                                                                                             <div class="candidate-logo-reform text-center">
-                                                                                                @if (worker.Status != (int)HOGRegister.Models.WorkerStatus.Active)
-                                                                                                {
-                                                                                                    <span class="suspended"> @string.Format(@"{0}", (HOGRegister.Models.WorkerStatus)worker.Status)</span>
-                                                                                                }
-
+                                                                                                <span class="suspended">@ViewBag.Title</span>
                                                                                                 <a href="#">
                                                                                                     <img width="120" height="120" src="~/Content/Images/08/e2.jpg" class="attachment-thumbnail size-thumbnail wp-post-image"
                                                                                                          alt="" sizes="(max-width: 120px) 100vw, 120px" />
@@ -148,7 +129,7 @@
                                                                                                 <h2 class="job-title">
                                                                                                     <a href="~/Admin/WorkerDetail/@worker.Id" rel="bookmark">@string.Format(@"{0} {1} {2}", worker.Firstname, worker.Midname, worker.Lastname).Replace("  ", " ")</a>
                                                                                                 </h2>
-                                                                                                <div class="job-location"> @string.Format(@"{0}", (HOGRegister.Models.UserRole)worker.Role)</div>
+                                                                                                @*<div class="job-location"> FAD (Data)</div>*@
                                                                                                 <a class="btn btn-browse" href="~/Admin/WorkerDetail/@worker.Id">View Profile</a>
 
                                                                                             </div>
@@ -158,7 +139,7 @@
 
                                                                                 }
                                                                             }
-                                                                           
+
                                                                         </div>
                                                                         <!-- grid row for workers end -->
                                                                     </div>
@@ -187,4 +168,4 @@
 
     </div>
 </section>
-<!-- InnerPage content begin -->
+<!-- InnerPage content lists begin -->

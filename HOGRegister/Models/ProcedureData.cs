@@ -12,8 +12,13 @@ namespace HOGRegister.Models
         ///with their expected response type
         ///</summary>
         public int Id { get; set; }
-        public int ProcName { get; set; }
-        public ProcedureResponseType ResponseType { get; }
+        public string ProcedureName { get; set; }
+        public int ResponseType { get; set; }
+        public ProcedureResponseType ProcedureResponseType
+        {
+            get { return (ProcedureResponseType)ResponseType; }
+            set { ResponseType = (int)value; }
+        }
     }
 
     public enum ProcedureResponseType
